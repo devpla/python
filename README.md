@@ -1,6 +1,6 @@
 # Hing9u's Python
 
-`.ipynb` 파일을 jupyter-book으로 `build` 하여 업로드
+`.ipynb` 파일을 [Jupyter Book](https://hing9u.github.io/python/)으로 `build` 하여 업로드
 
 
 
