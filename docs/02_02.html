@@ -1,0 +1,1359 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 &#8212; Hing9u&#39;s Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Practice 1 : 데이터 &amp; 제어문" href="practice1%28intro%2C%20container%29.html" />
+    <link rel="prev" title="조건문" href="02_01.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Hing9u's Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   개요
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Part
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="00_00.html">
+   00. Python 기초
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_01.html">
+     변수와 식별자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_02.html">
+     데이터 타입
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_03.html">
+     연산자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_04.html">
+     [참고] 표현식 &amp; 문장
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_05.html">
+     [정리] 변수와 자료형
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_data_container.html">
+   01. 컨테이너
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="02_00.html">
+   02. 제어문
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_01.html">
+     조건문
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     반복문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice1%28intro%2C%20container%29.html">
+     Practice 1 : 데이터 &amp; 제어문
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="03_function.html">
+   03. 함수
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice2%28function1%29.html">
+     Practice 2 : 함수 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice3%28function2%29.html">
+     Practice 3 : 함수 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice4%28function3%29.html">
+     Practice 4 : 함수 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_error_exception.html">
+   04. 에러 &amp; 예외 처리
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/02_02.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/02_02.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/02_02.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while">
+   while 반복문
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     활용법
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     [연습] while 문 작성하기
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summation">
+     [실습] 합(Summation)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     [응용] 한자리 씩 출력하기
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for">
+   for 문
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     활용법
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     [연습] for 문 작성하기
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-if">
+     [실습] for 문과 if 문 작성하기
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-index">
+     리스트(list) 순회에서 index의 활용하기
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#range">
+       range(리스트의 길이)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#enumerate">
+       enumerate()
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   반복제어
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#break">
+     break
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       [연습]
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         break
+        </span>
+       </code>
+       활용하기
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continue">
+     continue
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       [연습]
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         continue
+        </span>
+       </code>
+       문 작성하기
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#else">
+     else
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-else">
+       [연습]
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         for-else
+        </span>
+       </code>
+       활용하기
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pass">
+     pass
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>반복문<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="admonition-title">반복문 (Loop Statement)</p>
+<ul class="simple">
+<li><p>while</p></li>
+<li><p>for</p></li>
+</ul>
+</div>
+<div class="section" id="while">
+<h2>while 반복문<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code> 문은 조건식이 참(<code class="docutils literal notranslate"><span class="pre">True</span></code>)인 경우 반복적으로 코드를 실행합니다.</p>
+<div class="section" id="id2">
+<h3>활용법<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>문법</strong></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">&lt;</span><span class="n">조건식</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>예시</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;조건식이 참일 때까지&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;계속 반복&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> 문 역시 조건식 뒤에 콜론(<code class="docutils literal notranslate"><span class="pre">:</span></code>)이 반드시 필요하며, 이후 실행될 코드 블럭은 <strong>4spaces</strong>로 <strong>들여쓰기</strong>를 합니다.</p></li>
+<li><p><strong>반드시 종료조건을 설정해야 합니다.</strong></p></li>
+</ul>
+<center>
+    <img src="https://user-images.githubusercontent.com/18046097/61180567-3ac50e80-a653-11e9-9f12-39c404f4be30.png", alt="", width=300px>
+</center>
+</div>
+<br><br>
+<center>
+    <img src="https://user-images.githubusercontent.com/18046097/61180568-3ac50e80-a653-11e9-9960-ba15137290a6.png", alt="while"/>
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위의 flow chart를 조건문을 통해 만들어봅시다.</span>
+<span class="c1"># 아래에 코드를 작성하세요.</span>
+<span class="c1"># while 문을 활용해봅시다.</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;끝&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+끝
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>[연습] while 문 작성하기<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>사용자가 “안녕”이라고 입력할 때까지 인사하는 코드를 작성해보세요.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래에 코드를 작성하세요.</span>
+<span class="c1"># while 문을 활용해봅시다.</span>
+
+<span class="c1"># user_input에 초기값으로 비어있는 문자열을로 초기화하고,</span>
+
+<span class="c1"># user_input에 할당되는 값이 &#39;안녕&#39;일 떄까지,</span>
+    <span class="c1"># &#39;안녕?&#39;을 출력하고</span>
+    <span class="c1"># user_input에 사용자의 입력값을 받는 코드를 작성하시오.</span>
+    
+<span class="n">user_input</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="n">user_input</span> <span class="o">!=</span> <span class="s1">&#39;안녕&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;안녕?&#39;</span><span class="p">)</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;말해봐 : &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안녕?
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>말해봐 :  안녕
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summation">
+<h3>[실습] 합(Summation)<a class="headerlink" href="#summation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>1부터 사용자가 입력한 양의 정수까지의 총합을 구하는 코드를 작성해보세요.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>[입력 예시]</strong></p>
+<p>10</p>
+<p><strong>[출력 예시]</strong></p>
+<p>55</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래에 코드를 작성하세요</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">user_input</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">user_input</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">n</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 10
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>[응용] 한자리 씩 출력하기<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>사용자로부터 숫자 입력 받은 양의 정수의 각 자리 수를 1의 자리부터 차례대로 출력하는 코드를 작성해보세요.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>[입력 예시]</strong></p>
+<p>185</p>
+<p><strong>[출력 예시]</strong></p>
+<p>5</p>
+<p>8</p>
+<p>1</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래에 코드를 작성하세요.</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 185
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+8
+1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="for">
+<h2>for 문<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">for</span></code> 문은 시퀀스(string, tuple, list, range)를 포함한 순회가능한 객체(iterable)의 요소들을 순회합니다.</p>
+<hr class="docutils" />
+<div class="section" id="id5">
+<h3>활용법<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>문법</strong></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">임시변수</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">순회가능한데이터</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>예시</strong></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">menu</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;햄버거&#39;</span><span class="p">,</span> <span class="s1">&#39;피자&#39;</span><span class="p">,</span> <span class="s1">&#39;라면&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">menu</span><span class="p">)</span>
+</pre></div>
+</div>
+<center>
+    <img src="https://user-images.githubusercontent.com/18046097/61180565-3a2c7800-a653-11e9-806a-28838248de31.png", alt="">
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># flowchart를 for문을 통해 코드로 작성해봅시다.</span>
+<span class="c1"># 아래에 코드를 작성하세요.</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;끝&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+끝
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="for animation" src="https://user-images.githubusercontent.com/18046097/61180563-3a2c7800-a653-11e9-8a7a-c7d6e6b30141.gif" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span></code> 문에서 요소 값에 다른 값을 할당해도 다음 반복구문에 영향을 주지 않습니다.</p>
+<p>다음 요소 값에 의해 덮어 씌워지기 때문입니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for 문 안에서 임시 변수에 다른 값을 할당해도 반복구문에 영향을 주지 않습니다.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>[연습] for 문 작성하기<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">for</span></code> 문을 활용하여 사용자가 입력한 문자를 한글자씩 출력해보세요.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>[입력 예시]</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>문자를 입력하세요 : 안녕!
+</pre></div>
+</div>
+<p><strong>[출력 예시]</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>안
+녕
+!
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chars</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;문자를 입력하세요 : &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>문자를 입력하세요 :  안녕!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래에 코드를 작성하세요.</span>
+<span class="c1"># for 문을 활용해봅시다.</span>
+<span class="c1"># 변수 char에 할당된 문자를 한글자씩 출력하는 for 반복문을 작성하시오.</span>
+
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안
+녕
+!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="for-if">
+<h3>[실습] for 문과 if 문 작성하기<a class="headerlink" href="#for-if" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>반복문과 조건문만 활용하여 1~30까지 숫자 중에 홀수만 출력해보세요.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>[출력 예시]</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">3</span>
+<span class="mi">5</span>
+<span class="o">...</span>
+<span class="mi">27</span>
+<span class="mi">29</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래에 코드를 작성하세요.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-index">
+<h3>리스트(list) 순회에서 index의 활용하기<a class="headerlink" href="#list-index" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="range">
+<h4>range(리스트의 길이)<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">range()</span></code>와 순회할 list의 길이를 활용하여 index를 조작 가능합니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># range 함수로 0~3 범위를 순회하여 출력하는 for 문을 작성해봅시다.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># range(리스트의 길이)를 활용해서 출력해봅시다.</span>
+<span class="c1"># 0부터 리스트의 길이 만큼의 범위를 순회하면서 인덱스 숫자를 출력하는 for 문을 작성해봅시다.</span>
+
+<span class="n">menus</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;짜장면&#39;</span><span class="p">,</span> <span class="s1">&#39;초밥&#39;</span><span class="p">,</span> <span class="s1">&#39;피자&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">menus</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 홀수번째 메뉴를 샐러드로 바꾼다면?</span>
+
+<span class="n">menus</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;짜장면&#39;</span><span class="p">,</span> <span class="s1">&#39;초밥&#39;</span><span class="p">,</span> <span class="s1">&#39;피자&#39;</span><span class="p">,</span> <span class="s1">&#39;치킨&#39;</span><span class="p">,</span> <span class="s1">&#39;햄버거&#39;</span><span class="p">,</span> <span class="s1">&#39;곱창&#39;</span><span class="p">,</span> <span class="s1">&#39;소고기&#39;</span><span class="p">,</span> <span class="s1">&#39;삼겹살&#39;</span><span class="p">,</span> <span class="s1">&#39;김치찌개&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">menus</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">idx</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">menus</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;샐러드&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">menus</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;짜장면&#39;, &#39;샐러드&#39;, &#39;피자&#39;, &#39;샐러드&#39;, &#39;햄버거&#39;, &#39;샐러드&#39;, &#39;소고기&#39;, &#39;샐러드&#39;, &#39;김치찌개&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 순서를 함께 출력해봅시다.</span>
+<span class="c1"># 출력 예) </span>
+<span class="c1"># 1번쨰 메뉴: 짜장면</span>
+<span class="c1"># 2번쨰 메뉴: 초밥</span>
+<span class="c1"># 3번쨰 메뉴: 피자</span>
+<span class="c1"># 리스트의 길이 만큼의 범위를 순회하면서 메뉴의 순서와 해당 순서의 메뉴를 출력하는 for 문을 작성해봅시다.</span>
+
+<span class="n">menus</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;짜장면&#39;</span><span class="p">,</span> <span class="s1">&#39;초밥&#39;</span><span class="p">,</span> <span class="s1">&#39;피자&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">menus</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s1">번째 메뉴: </span><span class="si">{</span><span class="n">menus</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1번째 메뉴: 짜장면
+2번째 메뉴: 초밥
+3번째 메뉴: 피자
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="enumerate">
+<h4>enumerate()<a class="headerlink" href="#enumerate" title="Permalink to this headline">¶</a></h4>
+<p>인덱스(index)와 값(value)을 함께 활용 가능합니다.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code>를 활용하면, 추가적인 변수를 활용할 수 있습니다.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code>는 <a class="reference external" href="https://docs.python.org/ko/3.6/library/functions.html">내장 함수</a> 중 하나이며, 다음과 같이 구성되어 있습니다.</p></li>
+</ul>
+<blockquote>
+<div><center>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;img src=&quot;https://user-images.githubusercontent.com/18046097/61180561-3993e180-a653-11e9-9558-085c9a0ad65d.png&quot;, alt=&quot;enumerate&quot;&gt;
+</pre></div>
+</div>
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enumerate()를 활용해서 출력해봅시다.</span>
+
+<span class="n">lunchs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;짜장면&#39;</span><span class="p">,</span> <span class="s1">&#39;초밥&#39;</span><span class="p">,</span> <span class="s1">&#39;피자&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">lunch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lunchs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">lunch</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 짜장면
+1 초밥
+2 피자
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enumerate() 에 의해 반환되는 인덱스와 값(value)를 함께 출력하는 for 반복문을 작성해봅시다.</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">lunch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lunchs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">lunch</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 짜장면
+1 초밥
+2 피자
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enumerate()를 사용하였을 때 어떻게 표현이 되는지 확인해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">lunchs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">lunchs</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;enumerate object at 0x000002534D39DAC0&gt;
+[(0, &#39;짜장면&#39;), (1, &#39;초밥&#39;), (2, &#39;피자&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 첫번쨰 항목의 type을 확인해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">lunchs</span><span class="p">))[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">lunchs</span><span class="p">))[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0, &#39;짜장면&#39;)
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>숫자를 1부터 카운트 할 수도 있습니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enumerate() 에 의해 반환되는 인덱스가 1로 시작하여 카운트되는 for 반복문을 작성해봅시다.</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">lunch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lunchs</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">lunch</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 짜장면
+2 초밥
+3 피자
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>반복제어<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">break</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">continue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for-else</span></code></p></li>
+</ul>
+<div class="section" id="break">
+<h3>break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
+<p>반복문을 종료합니다.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> 나 <code class="docutils literal notranslate"><span class="pre">while</span></code> 문에서 빠져나갑니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># while 문에서 break를 활용해봅시다.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 종료 조건이 있는 while 문을 작성해봅시다.</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 종료 조건이 없는 while 문을 break 를 활용해서 종료시키는 코드를 작성해봅시다.</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for 문에서도 break를 사용할 수 있습니다.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 0부터 9까지 순회하는 for 반복문 안에서 </span>
+<span class="c1"># 1을 초과하는 경우 &#39;1 초과&#39; 를 출력하며 종료하는 코드를 작성해봅시다.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 초과&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+1 초과
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 이 무한루프는 끝나지 않는다. break는 바로 위에 있는 반복문만 제어</span>
+
+<span class="c1"># while True:</span>
+<span class="c1">#     print(&#39;while&#39;)</span>
+<span class="c1">#     for _ in range(10):</span>
+<span class="c1">#         print(&#39;for&#39;)</span>
+<span class="c1">#         break</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;while&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;for&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while
+for
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h4>[연습] <code class="docutils literal notranslate"><span class="pre">break</span></code> 활용하기<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>조건문과 반복문, <code class="docutils literal notranslate"><span class="pre">break</span></code>를 활용하여 리스트에서 쌀이 나왔을때 <code class="docutils literal notranslate"><span class="pre">for</span></code> 문을 멈추는 코드를 작성하세요.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>[출력 예시]</strong></p>
+<p>보리</p>
+<p>보리</p>
+<p>쌀</p>
+<p>잡았다!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rice</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;보리&#39;</span><span class="p">,</span> <span class="s1">&#39;보리&#39;</span><span class="p">,</span> <span class="s1">&#39;보리&#39;</span><span class="p">,</span> <span class="s1">&#39;쌀&#39;</span><span class="p">,</span> <span class="s1">&#39;보리&#39;</span><span class="p">]</span>
+
+<span class="c1"># 아래에 코드를 작성하세요.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rice</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s1">&#39;쌀&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;잡았다!&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>보리
+보리
+보리
+쌀
+잡았다!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="continue">
+<h3>continue<a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">continue</span></code>문은 continue 이후의 코드를 수행하지 않고 <em>다음 요소부터 계속(continue)하여</em> 반복을 수행합니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+        <span class="c1"># continue 이후의 코드는 실행되지 않습니다.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">는 홀수다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1는 홀수다.
+3는 홀수다.
+5는 홀수다.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>[연습] <code class="docutils literal notranslate"><span class="pre">continue</span></code> 문 작성하기<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>나이가 입력된 리스트가 있을때,
+조건문과 반복문, continue를 활용하여 20살 이상일때만 “성인입니다”라는 출력을 하는 코드를 작성하세요.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>[출력 예시]</strong></p>
+<p>23 살은 성인입니다.</p>
+<p>30 살은 성인입니다.</p>
+<p>25 살은 성인입니다.</p>
+<p>31 살은 성인입니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+
+<span class="c1"># 아래에 코드를 작성하세요.</span>
+
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1"> 살은 성인입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23 살은 성인입니다.
+30 살은 성인입니다.
+25 살은 성인입니다.
+31 살은 성인입니다.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="else">
+<h3>else<a class="headerlink" href="#else" title="Permalink to this headline">¶</a></h3>
+<p>끝까지 반복문을 실행한 이후에 실행됩니다.</p>
+<ul class="simple">
+<li><p>반복에서 리스트의 소진이나 (<code class="docutils literal notranslate"><span class="pre">for</span></code> 의 경우) 조건이 거짓이 돼서 (<code class="docutils literal notranslate"><span class="pre">while</span></code> 의 경우) 종료할 때 실행됩니다.</p></li>
+<li><p>하지만 반복문이 <strong><code class="docutils literal notranslate"><span class="pre">break</span></code> 문으로 종료될 때는 실행되지 않습니다.</strong> (즉, <code class="docutils literal notranslate"><span class="pre">break</span></code>를 통해 중간에 종료되지 않은 경우만 실행)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># break가 안되는 상황을 확인해봅시다.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">에서 break 실행됨.&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;break 실행안됨.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+break 실행안됨.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># break가 되는 상황을 확인해봅시다.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">에서 break 시행됨.&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;break 시행안됨.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+1에서 break 시행됨.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="for-else">
+<h4>[연습] <code class="docutils literal notranslate"><span class="pre">for-else</span></code> 활용하기<a class="headerlink" href="#for-else" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>조건문과 반복문, break, else 를 통해서 아래의 코드와 동일한 코드를 작성하세요.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>numbers 리스트에 4가 있을 경우 <code class="docutils literal notranslate"><span class="pre">True</span></code>를 출력하고, 없을 경우 <code class="docutils literal notranslate"><span class="pre">False</span></code>를 출력한다.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>[출력 예시]</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+<span class="c1"># 아래에 코드를 작성하세요.</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pass">
+<h3>pass<a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h3>
+<p>아무것도 하지 않습니다.</p>
+<ul class="simple">
+<li><p>문법적으로 문장이 필요하지만, 프로그램이 특별히 할 일이 없을 때 자리를 채우는 용도로 사용할 수 있다.</p></li>
+</ul>
+<p><strong><code class="docutils literal notranslate"><span class="pre">pass</span></code> 와 <code class="docutils literal notranslate"><span class="pre">continue</span></code> 차이</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pass</span>
+<span class="c1"># 0부터 4의 범위를 순회하며 출력하는 반복문 안에서 3이 나오는 경우 pass 하는 조건문을 작성해봅시다.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># continue</span>
+<span class="c1"># 0부터 4의 범위를 순회하며 출력하는 반복문 안에서 3이 나오는 경우 continue 하는 조건문을 작성해봅시다.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="02_01.html" title="previous page">조건문</a>
+    <a class='right-next' id="next-link" href="practice1%28intro%2C%20container%29.html" title="next page">Practice 1 : 데이터 &amp; 제어문</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hing9u<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

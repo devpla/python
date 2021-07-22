@@ -1,0 +1,1676 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04. 에러 &amp; 예외 처리 &#8212; Hing9u&#39;s Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Practice 4 : 함수 3" href="practice4%28function3%29.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Hing9u's Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   개요
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Part
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="00_00.html">
+   00. Python 기초
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_01.html">
+     변수와 식별자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_02.html">
+     데이터 타입
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_03.html">
+     연산자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_04.html">
+     [참고] 표현식 &amp; 문장
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_05.html">
+     [정리] 변수와 자료형
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_data_container.html">
+   01. 컨테이너
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_00.html">
+   02. 제어문
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_01.html">
+     조건문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_02.html">
+     반복문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice1%28intro%2C%20container%29.html">
+     Practice 1 : 데이터 &amp; 제어문
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="03_function.html">
+   03. 함수
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice2%28function1%29.html">
+     Practice 2 : 함수 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice3%28function2%29.html">
+     Practice 3 : 함수 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice4%28function3%29.html">
+     Practice 4 : 함수 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   04. 에러 &amp; 예외 처리
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/04_error_exception.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/04_error_exception.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/04_error_exception.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   디버깅
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     코드를 작성하다가 …
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   에러
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax-error">
+     문법 에러(Syntax Error)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   예외
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zerodivisionerror">
+     1. ZeroDivisionError
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nameerror">
+     2. NameError
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#typeerror">
+     3. TypeError
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       (1) 타입 불일치
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       (2) 매개변수 타입 불일치
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       (3) 필수 매개변수가 누락된 경우
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       (4) 매개변수 개수가 초과해서 들어온 경우
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valueerror">
+     4. ValueError
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexerror">
+     5. IndexError
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyerror">
+     6. KeyError
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modulenotfounderror">
+     7. ModuleNotFoundError
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importerror">
+     8. ImportError
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyboardinterrupt">
+     9. KeyboardInterrupt
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indentation-error">
+     10. Indentation Error
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   예외 처리
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#try-except">
+     try &amp; except
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       기초 문법
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       복수의 예외 처리
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#else">
+     else
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finally">
+     finally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#as">
+     에러 메시지 처리  as
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   예외 발생 시키기
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#raise">
+     raise
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       [연습] raise 예외 발생시키기
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assert">
+     assert
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>04. 에러 &amp; 예외 처리<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Error / Exception Handling</p>
+<ul class="simple">
+<li><p>에러(Error)</p></li>
+<li><p>예외 처리(Exception Handling)</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="https://docs.python.org/ko/3/library/exceptions.html#exception-hierarchy">파이썬 문서</a></p>
+<div class="section" id="id2">
+<h2>디버깅<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>“코드의 상태를 신중하게 출력해가며 심사숙고하는 것보다 효과적인 디버깅 도구는 없습니다.”</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                    - 브라이언 커니핸, Unix for Beginners.
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>print문 활용</p>
+<ul>
+<li><p>특정 함수 결과, 반복 / 조건 결과 등 나눠서 생각</p></li>
+</ul>
+</li>
+<li><p>개발 환경(text editor, IDE) 등에서 제공하는 기능 활용</p>
+<ul>
+<li><p>breakpoint, 변수 조회 등</p></li>
+</ul>
+</li>
+<li><p>python tutor 활용 (단순 파이썬 코드인 경우)</p></li>
+<li><p>뇌컴파일, 눈디버깅</p></li>
+</ul>
+<div class="section" id="id3">
+<h3>코드를 작성하다가 …<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>에러 메세지가 발생하는 경우</p>
+<ul>
+<li><p>해당하는 위치를 찾아 메세지를 해결</p></li>
+</ul>
+</li>
+<li><p>로직 에러가 발생하는 경우</p>
+<ul>
+<li><p>명시적인 에러 메세지 없이 예상과 다른 결과가 나온 경우</p>
+<ul>
+<li><p>정상적으로 동작했던 코드 이후 작성된 코드를 생각해봄</p></li>
+<li><p>전체 코드를 살펴봄</p></li>
+<li><p>휴식을 가져봄</p></li>
+<li><p>누군가에게 설명해봄</p></li>
+<li><p>…</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>에러<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>발생할 수 있는 에러(Error)의 종류를 확인해봅시다.</p>
+<div class="section" id="syntax-error">
+<h3>문법 에러(Syntax Error)<a class="headerlink" href="#syntax-error" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>문법 에러가 있는 프로그램은 실행되지 않습니다.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>에러 발생 시 <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>라는 키워드와 함께, 에러의 상세 내용을 보여줍니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">파일이름</span></code>과 <code class="docutils literal notranslate"><span class="pre">줄번호</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code> 문자를 통해 파이썬이 코드를 읽어 들일 때(<code class="docutils literal notranslate"><span class="pre">parser</span></code>) 문제가 발생한 위치를 표현합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parser</span></code> 는 줄에서 에러가 감지된 가장 앞의 위치를 가리키는 캐럿(caret)기호(<code class="docutils literal notranslate"><span class="pre">^</span></code>)를 표시합니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 조건문을 통해 문법 에러를 발생시켜봅시다.</span>
+
+<span class="c1"># 아래 코드는 else문 뒤에 콜론이 누락되어 있습니다.</span>
+<span class="c1"># 코드를 실행시켜보고 invalid syntax 오류를 확인해보세요.</span>
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;참&#39;</span><span class="p">)</span>
+<span class="k">else</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;거짓&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_5624/4061262576.py&quot;</span><span class="gt">, line </span><span class="mi">8</span>
+    <span class="k">else</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문을 통해 다른 오류를 발생시켜봅시다.</span>
+
+<span class="c1"># 아래 코드는 닫는 따옴표가 누락되어 있습니다.</span>
+<span class="c1"># 코드를 실행시켜보고 EOL 오류(따옴표 오류)를 확인해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hi)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_5624/3802404740.py&quot;</span><span class="gt">, line </span><span class="mi">6</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hi)</span>
+              <span class="o">^</span>
+<span class="ne">SyntaxError</span>: EOL while scanning string literal
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># EOF 에러(괄호 닫기 오류)도 보게됩니다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_5624/3660871560.py&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span>
+              <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 정확한 위치를 지정하지 않을 수도 있으므로 지정된 위치 전후를 모두 확인해야합니다.</span>
+
+<span class="c1"># 아래 코드의 조건문에는 콜론이 누락되어 있습니다.</span>
+<span class="c1"># 코드를 실행시켜보고 문법 오류를 확인해보세요.</span>
+
+<span class="k">if</span> <span class="kc">True</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;참&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_5624/197234176.py&quot;</span><span class="gt">, line </span><span class="mi">6</span>
+    <span class="k">if</span> <span class="kc">True</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;참&#39;</span><span class="p">)</span>
+            <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>예외<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>실행 도중 예상하지 못한 상황(exception)을 맞이하면, 프로그램 실행을 멈춥니다.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>문법적으로는 옳지만, 실행시 발생하는 에러입니다.</p></li>
+<li><p>즉, 실행 중에 감지되는 에러들을 <strong>예외</strong>(exeption)라고 부릅니다.</p></li>
+<li><p>예외는 여러 타입 (type)으로 나타나고, 타입이 메세지의 일부로 출력됩니다.</p>
+<ul>
+<li><p>NameError, TypeError 등은 발생한 예외 타입의 종류(이름)</p></li>
+</ul>
+</li>
+<li><p><em>아래 제시된 모든 에러는 <code class="docutils literal notranslate"><span class="pre">Exception</span></code>을 상속받아 이뤄집니다.</em></p></li>
+<li><p>사용자 정의 예외를 만들어 관리할 수 있습니다.</p></li>
+</ul>
+<div class="section" id="zerodivisionerror">
+<h3>1. ZeroDivisionError<a class="headerlink" href="#zerodivisionerror" title="Permalink to this headline">¶</a></h3>
+<p>파이썬에서는 어떤 수를 0으로 나누게 되면 에러가 발생합니다</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ZeroDivisionError를 확인해봅시다.</span>
+<span class="c1"># 어떤 수를 0으로 나누는 코드를 작성해보고 오류를 확인해보세요.</span>
+
+<span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">1749619089.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># 어떤 수를 0으로 나누는 코드를 작성해보고 오류를 확인해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nameerror">
+<h3>2. NameError<a class="headerlink" href="#nameerror" title="Permalink to this headline">¶</a></h3>
+<p>지역 혹은 전역 이름 공간(namespace) 내에서 유효하지 않는 이름은 사용할 수 없습니다. 즉, 어느 곳에서도 정의되지 않은 변수를 호출 하였을 경우 에러가 발생합니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NameError를 확인해봅시다. </span>
+<span class="c1"># abc라는 변수를 print로 출력해보고 오류를 확인해보세요.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">abc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">2011198854.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># abc라는 변수를 print로 출력해보고 오류를 확인해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">abc</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;abc&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="typeerror">
+<h3>3. TypeError<a class="headerlink" href="#typeerror" title="Permalink to this headline">¶</a></h3>
+<p>자료형이 올바르지 못한 경우에도 에러가 발생합니다.</p>
+<ul class="simple">
+<li><p>타입 불일치</p></li>
+<li><p>매개변수 타입 불일치</p></li>
+<li><p>매개변수 누락</p></li>
+<li><p>매개변수 개수 초과</p></li>
+</ul>
+<div class="section" id="id6">
+<h4>(1) 타입 불일치<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TypeError를 확인해봅시다.</span>
+<span class="c1"># 숫자 1과 문자 1을 더하는 코드를 작성해보고 오류를 확인해보세요.</span>
+
+<span class="mi">1</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">660587461.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># 숫자 1과 문자 1을 더하는 코드를 작성해보고 오류를 확인해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="mi">1</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h4>(2) 매개변수 타입 불일치<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 함수 호출과정에서도 TypeError 오류가 발생할 수 있습니다.</span>
+<span class="c1"># round 함수는 어떤 수를 반올림해주는 내장 함수입니다.</span>
+<span class="c1"># round 함수에 숫자가 아닌 문자를 넣어보고 발생하는 오류를 확인해봅시다.</span>
+
+<span class="nb">round</span><span class="p">(</span><span class="s1">&#39;3.6&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">4087423749.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># round 함수에 숫자가 아닌 문자를 넣어보고 발생하는 오류를 확인해봅시다.</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">round</span><span class="p">(</span><span class="s1">&#39;3.6&#39;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: type str doesn&#39;t define __round__ method
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h4>(3) 필수 매개변수가 누락된 경우<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 함수호출 과정에서 다양한 오류를 확인할 수 있습니다. </span>
+<span class="c1"># (1) 필수 매개변수가 누락된 경우를 살펴봅시다.</span>
+
+<span class="c1"># 내장 random 모듈을 불러오세요.</span>
+<span class="c1"># random.sample() 함수는 2개의 매개변수를 받도록 정의되어 있습니다.</span>
+<span class="c1"># random.sample() 함수에 숫자 3개가 담긴 리스트만 넣고 호출해보세요.</span>
+<span class="c1"># 그리고 매개변수가 누락되어 발생하는 오류를 확인해보세요.</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">3720091620.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> 
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">random</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="ne">TypeError</span>: sample() missing 1 required positional argument: &#39;k&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>(4) 매개변수 개수가 초과해서 들어온 경우<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 함수호출 과정에서 다양한 오류를 확인할 수 있습니다. </span>
+<span class="c1"># (2) 매개변수 개수가 초과해서 들어온 경우를 살펴봅시다.</span>
+
+<span class="c1"># random.choice() 함수는 하나의 매개변수만 받도록 정의되어 있습니다.</span>
+<span class="c1"># 숫자 3개가 담긴 리스트와, 숫자 6을 넣고 호출해보세요.</span>
+<span class="c1"># 그리고 매개변수가 초과되어 발생하는 오류를 확인해보세요.</span>
+<span class="c1"># ====</span>
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">1181987922.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># 그리고 매개변수가 초과되어 발생하는 오류를 확인해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># ====</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: choice() takes 2 positional arguments but 3 were given
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="valueerror">
+<h3>4. ValueError<a class="headerlink" href="#valueerror" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>자료형은 올바르나 값이 적절하지 않은 경우</p></li>
+<li><p>존재하지 않는 값을 찾고자 할 경우</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ValueError를 확인해봅시다.</span>
+
+<span class="c1"># int()는 정수가 아닌 값을 받았을 경우 에러가 발생합니다.</span>
+<span class="c1"># int() 안에 문자 3.5를 넣고 호출한 뒤 발생하는 오류를 확인해보세요.</span>
+
+<span class="nb">int</span><span class="p">(</span><span class="s1">&#39;3.5&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">110327471.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># int() 안에 문자 3.5를 넣고 호출한 뒤 발생하는 오류를 확인해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;3.5&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;3.5&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ValueError를 확인해봅시다.</span>
+
+<span class="c1"># index()는 리스트에서 찾고자 하는 값의 인덱스를 반환합니다.</span>
+<span class="c1"># numbers 리스트에 없는 값인 3을 찾게 되면 에러가 발생합니다.</span>
+<span class="c1"># 아래 코드를 실행시킨 뒤 발생하는 오류를 확인해보세요.</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">2635018620.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">numbers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: 3 is not in list
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indexerror">
+<h3>5. IndexError<a class="headerlink" href="#indexerror" title="Permalink to this headline">¶</a></h3>
+<p>인덱스가 존재하지 않거나 범위를 벗어나는 경우</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># IndexError를 확인해봅시다.</span>
+
+<span class="c1"># 비어있는 리스트는 어떤 인덱스 값으로든 접근할 수 없습니다.</span>
+<span class="c1"># 비어있는 empty_list를 -1 인덱스로 접근했을 때 발생하는 오류를 확인해보세요.</span>
+
+<span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">empty_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">1949616608.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">empty_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="keyerror">
+<h3>6. KeyError<a class="headerlink" href="#keyerror" title="Permalink to this headline">¶</a></h3>
+<p>딕셔너리에서 Key가 없는 경우</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KeyError를 확인해봅시다. </span>
+
+<span class="c1"># 딕셔너리는 존재하지 않는 Key로 접근하게 되면 오류가 발생합니다.</span>
+<span class="c1"># 아래 songs라는 딕셔너리에는 &#39;sia&#39;라는 Key만 존재하며,</span>
+<span class="c1"># &#39;queen&#39;이라는 키는 존재하지 않습니다.</span>
+<span class="c1"># 코드를 실행시켜보고 발생하는 오류를 확인해보세요.</span>
+
+<span class="n">songs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sia&#39;</span><span class="p">:</span> <span class="s1">&#39;candy cane lane&#39;</span><span class="p">}</span>
+<span class="n">songs</span><span class="p">[</span><span class="s1">&#39;queen&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">3358014412.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">songs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sia&#39;</span><span class="p">:</span> <span class="s1">&#39;candy cane lane&#39;</span><span class="p">}</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">songs</span><span class="p">[</span><span class="s1">&#39;queen&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;queen&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modulenotfounderror">
+<h3>7. ModuleNotFoundError<a class="headerlink" href="#modulenotfounderror" title="Permalink to this headline">¶</a></h3>
+<p>존재하지 않는 모듈을 import 하는 경우</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ModuleNotFoundError를 확인해봅시다.</span>
+
+<span class="c1"># 파이썬에 존재하지 않는 모듈인 &quot;reque&quot;라는 이름의 모듈을 불러와봅시다(import).</span>
+<span class="c1"># 그리고 발생하는 오류를 확인해보세요.</span>
+
+<span class="kn">import</span> <span class="nn">reque</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">889465546.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># 그리고 발생하는 오류를 확인해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">reque</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;reque&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importerror">
+<h3>8. ImportError<a class="headerlink" href="#importerror" title="Permalink to this headline">¶</a></h3>
+<p>모듈을 찾았으나 가져오는 과정에서 실패하는 경우 (존재하지 않는 클래스/함수 호출)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ImportError를 확인해봅시다.</span>
+
+<span class="c1"># 파이썬 내장 random 모듈은 존재하나 그 안에 &quot;sampl&quot;이라는 함수는 존재하지 않습니다.</span>
+<span class="c1"># random 모듈을 불러와서 &quot;sampl&quot;이라는 함수를 불러와보고, 발생하는 오류를 확인해보세요.</span>
+
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">sampl</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">1029549712.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># random 모듈을 불러와서 &quot;sampl&quot;이라는 함수를 불러와보고, 발생하는 오류를 확인해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">sampl</span>
+
+<span class="ne">ImportError</span>: cannot import name &#39;sampl&#39; from &#39;random&#39; (c:\users\user\appdata\local\programs\python\python39\lib\random.py)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="keyboardinterrupt">
+<h3>9. KeyboardInterrupt<a class="headerlink" href="#keyboardinterrupt" title="Permalink to this headline">¶</a></h3>
+<p>주피터 노트북에서는 정지 버튼이지만, 실제로 우리가 돌릴 때는 ctrl+c를 통해 종료하였을 때 발생합니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KeyboardInterrupt를 확인해봅시다.</span>
+
+<span class="c1"># 무한 반복되는 while문을 실행시켜보고, 정지시켜보세요.</span>
+<span class="c1"># 그리고 발생하는 오류를 확인해보세요.</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">2943268627.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="k">pass</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indentation-error">
+<h3>10. Indentation Error<a class="headerlink" href="#indentation-error" title="Permalink to this headline">¶</a></h3>
+<p>Indentation이 적절하지 않은 경우</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_5624/3296739069.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_5624/955869009.py&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: unexpected indent
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">파이썬 내장 예외</p>
+<p><a class="reference external" href="https://docs.python.org/ko/3/library/exceptions.html#exception-hierarchy">파이썬 내장 예외(build-in-exceptions)의 클래스 계층 구조</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">BaseException</span>
+ <span class="o">+--</span> <span class="ne">SystemExit</span>
+ <span class="o">+--</span> <span class="ne">KeyboardInterrupt</span>
+ <span class="o">+--</span> <span class="ne">GeneratorExit</span>
+ <span class="o">+--</span> <span class="ne">Exception</span>
+      <span class="o">+--</span> <span class="ne">StopIteration</span>
+      <span class="o">+--</span> <span class="ne">StopAsyncIteration</span>
+      <span class="o">+--</span> <span class="ne">ArithmeticError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">FloatingPointError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">OverflowError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ZeroDivisionError</span>
+      <span class="o">+--</span> <span class="ne">AssertionError</span>
+      <span class="o">+--</span> <span class="ne">AttributeError</span>
+      <span class="o">+--</span> <span class="ne">BufferError</span>
+      <span class="o">+--</span> <span class="ne">EOFError</span>
+      <span class="o">+--</span> <span class="ne">ImportError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ModuleNotFoundError</span>
+      <span class="o">+--</span> <span class="ne">LookupError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">IndexError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">KeyError</span>
+      <span class="o">+--</span> <span class="ne">MemoryError</span>
+      <span class="o">+--</span> <span class="ne">NameError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">UnboundLocalError</span>
+      <span class="o">+--</span> <span class="ne">OSError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">BlockingIOError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ChildProcessError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionError</span>
+      <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">BrokenPipeError</span>
+      <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionAbortedError</span>
+      <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionRefusedError</span>
+      <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionResetError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">FileExistsError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">FileNotFoundError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">InterruptedError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">IsADirectoryError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">NotADirectoryError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">PermissionError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ProcessLookupError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">TimeoutError</span>
+      <span class="o">+--</span> <span class="ne">ReferenceError</span>
+      <span class="o">+--</span> <span class="ne">RuntimeError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">NotImplementedError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">RecursionError</span>
+      <span class="o">+--</span> <span class="ne">SyntaxError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">IndentationError</span>
+      <span class="o">|</span>         <span class="o">+--</span> <span class="ne">TabError</span>
+      <span class="o">+--</span> <span class="ne">SystemError</span>
+      <span class="o">+--</span> <span class="ne">TypeError</span>
+      <span class="o">+--</span> <span class="ne">ValueError</span>
+      <span class="o">|</span>    <span class="o">+--</span> <span class="ne">UnicodeError</span>
+      <span class="o">|</span>         <span class="o">+--</span> <span class="ne">UnicodeDecodeError</span>
+      <span class="o">|</span>         <span class="o">+--</span> <span class="ne">UnicodeEncodeError</span>
+      <span class="o">|</span>         <span class="o">+--</span> <span class="ne">UnicodeTranslateError</span>
+      <span class="o">+--</span> <span class="ne">Warning</span>
+           <span class="o">+--</span> <span class="ne">DeprecationWarning</span>
+           <span class="o">+--</span> <span class="ne">PendingDeprecationWarning</span>
+           <span class="o">+--</span> <span class="ne">RuntimeWarning</span>
+           <span class="o">+--</span> <span class="ne">SyntaxWarning</span>
+           <span class="o">+--</span> <span class="ne">UserWarning</span>
+           <span class="o">+--</span> <span class="ne">FutureWarning</span>
+           <span class="o">+--</span> <span class="ne">ImportWarning</span>
+           <span class="o">+--</span> <span class="ne">UnicodeWarning</span>
+           <span class="o">+--</span> <span class="ne">BytesWarning</span>
+           <span class="o">+--</span> <span class="ne">ResourceWarning</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>예외 처리<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">예외 처리</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">try</span></code> : 코드를 실행함</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">except</span></code> : try 문에서 예외가 발생 시 실행함</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code> : try 문에서 예외가 발생하지 않으면 실행함</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finally</span></code> : 예외 발생 여부와 관계없이 항상 실행함</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">면접장</span> <span class="n">입장</span>
+    <span class="n">자기소개</span>
+    <span class="n">질의응답</span>
+    <span class="n">PT면접</span>
+<span class="k">except</span> <span class="n">입장하다</span> <span class="n">넘어지면</span><span class="p">:</span>
+    <span class="n">울면서</span> <span class="n">집가기</span>
+<span class="k">except</span> <span class="n">압박면접</span><span class="p">:</span>
+    <span class="n">침착하고</span> <span class="n">웃으며</span> <span class="n">답변</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">속으로</span> <span class="n">만세삼창</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">예의바르게</span> <span class="n">인사하고</span> <span class="n">나와서</span> <span class="n">문닫기</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="try-except">
+<h3>try &amp; except<a class="headerlink" href="#try-except" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">try</span></code> 문(statement)와 <code class="docutils literal notranslate"><span class="pre">except</span></code> 절(clause)을 이용하여 <strong>예외 처리</strong>(Exception Handling)를 할 수 있습니다.</p>
+<hr class="docutils" />
+<div class="section" id="id11">
+<h4>기초 문법<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="p">(</span><span class="n">예외</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">try</span></code> 아래의 코드블락(code block)이 실행됩니다.</p></li>
+<li><p>예외가 발생되지 않으면, <strong><code class="docutils literal notranslate"><span class="pre">except</span></code>없이 실행이 종료 됩니다.</strong></p></li>
+<li><p>예외가 발생하면, <strong>남은 부분을 수행하지 않고</strong>, <code class="docutils literal notranslate"><span class="pre">except</span></code>가 실행됩니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 사용자로부터 값을 받아 정수로 변환하여 출력해봅시다.</span>
+
+<span class="c1"># input() 함수를 이용하여 사용자로부터 입력을 받은 뒤</span>
+<span class="c1"># 해당 값을 정수로 변환하여 출력해보세요.</span>
+
+<span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ??
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">907681871.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># 해당 값을 정수로 변환하여 출력해보세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;??&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 사용자가 문자열을 넣어 해당 오류(ValueError)가 발생하면, 숫자를 입력하라고 출력해봅시다.</span>
+<span class="c1"># 위에서 배운 try-except 구문을 활용해보세요.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">()))</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;숫자를 입력하세요&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ??
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>숫자를 입력하세요
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>복수의 예외 처리<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>하나 이상의 예외를 모두 처리할 수 있습니다.</p>
+<p>괄호가 있는 튜플로 여러 개의 예외를 지정할 수 있습니다.</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="p">(</span><span class="n">예외1</span><span class="p">,</span> <span class="n">예외2</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">2</span><span class="o">&gt;</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="n">예외1</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">2</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="n">예외2</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">3</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 숫자 100을 사용자가 입력한 값으로 나눈 후 출력하는 코드를 작성해봅시다.</span>
+
+<span class="c1"># input() 함수를 이용하여 사용자로부터 입력을 받으세요.</span>
+<span class="c1"># 해당 값을 정수로 변환한 뒤, 숫자 100을 입력받은 값으로 나누는 코드를 작성해보세요.</span>
+
+<span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;100을 무슨 수로 나눌까?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">100</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100을 무슨 수로 나눌까? 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 문자열일때와 0일때의 경우를 모두 처리를 해봅시다.</span>
+
+<span class="c1"># 어떤 값을 숫자가 아닌 값으로 나눌 때 발생하는 에러는 ValueError입니다.</span>
+<span class="c1"># 어떤 값을 0으로 나눌 때 발생하는 에러는 ZeroDivisionError입니다.</span>
+<span class="c1"># try-except 구문을 활용하여 위의 두 오류를 처리해보세요.</span>
+
+<span class="k">try</span><span class="p">:</span> 
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;100을 무슨 수로 나눌까?&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">100</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;나눌 수 있는 걸 입력해줘&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100을 무슨 수로 나눌까? 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>나눌 수 있는 걸 입력해줘
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 각각 다른 오류를 출력할 수 있습니다.</span>
+<span class="c1"># 여러 개의 except 구문을 활용해보세요.</span>
+<span class="c1"># (ValueError, ZeroDivisionError)</span>
+
+<span class="k">try</span><span class="p">:</span> 
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;100을 무슨 수로 나눌까?&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">100</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;문자 말고 정수를 넣어주세요.&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0은 안되지&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100을 무슨 수로 나눌까? ㅁ
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>문자 말고 정수를 넣어주세요.
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>여기서 중요한 내용은 <strong>에러가 순차적으로 수행됨</strong>으로, 가장 작은 범주부터 시작해야 합니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exception은 가장 큰 범주의 에러로써 모든 에러를 처리할 수 있습니다.</span>
+<span class="c1"># 따라서 아래 코드는 숫자가 아닌 값을 넣었을 때 순차적으로 먼저 적힌 Exception 에러가 발생합니다.</span>
+<span class="c1"># 코드를 실행하고 결과를 확인해보세요.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;값을 입력하시오: &#39;</span><span class="p">)</span>
+    <span class="mi">100</span><span class="o">/</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span> <span class="c1"># Exception 은 가장 큰 범주</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;모르겠지만 에러야&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;숫자를 넣어&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>값을 입력하시오:  a
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>모르겠지만 에러야
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="else">
+<h3>else<a class="headerlink" href="#else" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>에러가 발생하지 않는 경우 수행되는 문장은 <code class="docutils literal notranslate"><span class="pre">else</span></code>를 이용합니다.</p></li>
+<li><p>모든 except 절 뒤에와야 합니다.</p></li>
+<li><p>try 절이 예외를 일으키지 않을 때 실행되어야만 하는 코드에 적절합니다.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="n">예외</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">2</span><span class="o">&gt;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">3</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># else를 사용해봅시다.</span>
+
+<span class="c1"># try 구문에서 numbers라는 이름의 리스트에 숫자 3개를 저장하세요.</span>
+<span class="c1"># 그리고 존재하지 않는 인덱스의 값을 가져와서 number 변수에 저장하세요.</span>
+<span class="c1"># (이 때, 존재하지 않는 인덱스를 참고하는 경우 IndexError가 발생하게 됩니다.)</span>
+<span class="c1"># except 구문에서 IndexError가 발생할 경우 &#39;오류 발생&#39;이라는 메세지를 출력하세요.</span>
+<span class="c1"># 마지막으로 else 구문을 활용하여 number * 100을 출력해보세요.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;오류 발생&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>300
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;오류 발생&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>오류 발생
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="finally">
+<h3>finally<a class="headerlink" href="#finally" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>반드시 수행해야하는 문장은 <code class="docutils literal notranslate"><span class="pre">finally</span></code>를 활용합니다.</p></li>
+<li><p>즉, 모든 상황에 실행되어야만 하는 코드를 정의하는데 활용합니다.</p></li>
+<li><p>예외의 발생 여부과 관계없이 try 문을 떠날 때 항상 실행합니다.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="n">예외</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">2</span><span class="o">&gt;</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">3</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># finally를 사용해봅시다.</span>
+<span class="c1"># 아래 코드에서 finally 구문을 활용하여 &#39;성적 파일을 종료합니다&#39;라는 메세지를 출력해보세요.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;성적 파일을 읽어옵니다.&#39;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;python&#39;</span><span class="p">:</span> <span class="s1">&#39;A+&#39;</span><span class="p">}</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;java&#39;</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s1">는 딕셔너리에 없는 키입니다.&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;성적 파일을 종료합니다&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>성적 파일을 읽어옵니다.
+&#39;java&#39;는 딕셔너리에 없는 키입니다.
+성적 파일을 종료합니다
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="as">
+<h3>에러 메시지 처리  as<a class="headerlink" href="#as" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">as</span></code> 키워드를 활용하여 에러 메시지를 보여줄 수도 있습니다.</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="n">예외</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">코드</span> <span class="n">블럭</span> <span class="mi">2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># except 구문에서 발생하는 에러 메세지를 코드 블럭에 넘겨줄 수도 있습니다.</span>
+
+<span class="c1"># 아래 코드에서 as를 활용하여 에러 메세지를 그 아래 코드 블럭에 넘겨보세요.</span>
+<span class="c1"># 그리고 as로 명명한 에러 메세지를 print를 이용하여 출력해보세요.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">empty_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="c1"># 여기에 코드를 작성하세요</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;인덱스 에러가 발생&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>인덱스 에러가 발생
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">empty_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s1">, 오류가 발생했습니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list index out of range, 오류가 발생했습니다.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>예외 발생 시키기<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="raise">
+<h3>raise<a class="headerlink" href="#raise" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">raise</span></code>를 통해 예외를 강제로 발생(Exception Raising)시킬 수 있습니다.</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="o">&lt;</span><span class="n">에러</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;메시지&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># raise를 사용해봅시다.</span>
+
+<span class="c1"># raise만 작성한 뒤 실행시켜봅시다.</span>
+<span class="c1"># 아래 코드를 실행시켜보고 결과를 확인하세요.</span>
+
+<span class="k">raise</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">308333447.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># 아래 코드를 실행시켜보고 결과를 확인하세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="k">raise</span>
+
+<span class="ne">RuntimeError</span>: No active exception to reraise
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 이번에는 ValueError() 오류를 raise해봅시다.</span>
+<span class="c1"># 아래 코드를 실행시켜보고 결과를 확인하세요.</span>
+
+<span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">1307088514.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># 아래 코드를 실행시켜보고 결과를 확인하세요.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: hi
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h4>[연습] raise 예외 발생시키기<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>리스트를 받아 평균을 반환하는 <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">avg(scores)</span></code>를 작성하세요.</p>
+</div></blockquote>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>scores의 길이가 0인 경우 <code class="docutils literal notranslate"><span class="pre">Exception</span></code>과 메시지를 발생시키세요.</p>
+<ul>
+<li><p><em>예) Exception: 학생이 없습니다.</em></p></li>
+</ul>
+</li>
+<li><p>정상적인 경우에는 결과를 return합니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래에 코드를 작성하세요.</span>
+
+<span class="k">def</span> <span class="nf">get_avg</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">scores</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;학생이 없습니다.&#39;</span><span class="p">)</span>     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 해당 코드를 통해 올바른 결과가 나오는지 확인하세요.</span>
+<span class="n">get_avg</span><span class="p">([])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5624</span><span class="o">/</span><span class="mf">2485888008.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># 해당 코드를 통해 올바른 결과가 나오는지 확인하세요.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">get_avg</span><span class="p">([])</span>
+
+<span class="nn">~\AppData\Local\Temp/ipykernel_5624/499962949.py</span> in <span class="ni">get_avg</span><span class="nt">(scores)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;학생이 없습니다.&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: 학생이 없습니다.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="assert">
+<h3>assert<a class="headerlink" href="#assert" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">assert</span></code> 문은 예외를 발생시키는 다른 방법입니다.</p>
+<p>보통 <strong>상태를 검증하는데 사용</strong>되며 무조건 <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>가 발생합니다.</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">Boolean</span> <span class="n">expression</span><span class="p">,</span> <span class="n">error</span> <span class="n">message</span>
+
+<span class="k">assert</span> <span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;길이가 1이 아닙니다.&#39;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>위의 검증식이 거짓일 경우를 발생합니다.</p>
+<p>일반적으로 <strong>디버깅용도</strong>로 사용됩니다. <a class="reference external" href="https://docs.python.org/ko/3/reference/simple_stmts.html#the-assert-statement">파이썬 문서</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python code.py
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">&quot;code.py&quot;</span>, line <span class="m">1</span>, <span class="k">in</span> &lt;module&gt;
+    assert len<span class="o">([</span><span class="m">1</span>, <span class="m">2</span><span class="o">])</span> <span class="o">==</span> <span class="m">1</span>, <span class="s1">&#39;길이가 1이 아닙니다.&#39;</span>
+AssertionError: 길이가 1이 아닙니다.
+
+$ python -O code.py
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="practice4%28function3%29.html" title="previous page">Practice 4 : 함수 3</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hing9u<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

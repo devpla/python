@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연산자 &#8212; Hing9u&#39;s Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="[참고] 표현식 &amp; 문장" href="00_04.html" />
+    <link rel="prev" title="데이터 타입" href="00_02.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Hing9u's Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   개요
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Part
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_00.html">
+   00. Python 기초
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_01.html">
+     변수와 식별자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_02.html">
+     데이터 타입
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     연산자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_04.html">
+     [참고] 표현식 &amp; 문장
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_05.html">
+     [정리] 변수와 자료형
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_data_container.html">
+   01. 컨테이너
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_00.html">
+   02. 제어문
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_01.html">
+     조건문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_02.html">
+     반복문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice1%28intro%2C%20container%29.html">
+     Practice 1 : 데이터 &amp; 제어문
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="03_function.html">
+   03. 함수
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice2%28function1%29.html">
+     Practice 2 : 함수 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice3%28function2%29.html">
+     Practice 3 : 함수 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice4%28function3%29.html">
+     Practice 4 : 함수 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_error_exception.html">
+   04. 에러 &amp; 예외 처리
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/00_03.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/00_03.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/00_03.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   산술 연산자
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   비교 연산자
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   논리 연산자
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#short-circuit-evaluation">
+     단축평가 (Short Circuit Evaluation)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   복합 연산자
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   기타 주요 연산자
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenation">
+     Concatenation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#containment-test">
+     Containment Test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identity">
+     Identity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing-slicing">
+     Indexing/Slicing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   연산자 우선순위
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>연산자<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>산술 연산자<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Python에서는 기본적인 사칙연산이 가능합니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>연산자</p></th>
+<th class="head"><p>내용</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>덧셈</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>뺄셈</p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>곱셈</p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>나눗셈</p></td>
+</tr>
+<tr class="row-even"><td><p>//</p></td>
+<td><p>몫</p></td>
+</tr>
+<tr class="row-odd"><td><p>%</p></td>
+<td><p>나머지(modulo)</p></td>
+</tr>
+<tr class="row-even"><td><p>**</p></td>
+<td><p>거듭제곱</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>나눗셈 (<code class="docutils literal notranslate"><span class="pre">/</span></code>) 은 항상 float를 돌려줍니다.</p></li>
+<li><p>정수 나눗셈 으로 (소수부 없이) 정수 결과를 얻으려면 <code class="docutils literal notranslate"><span class="pre">//</span></code> 연산자를 사용합니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2의 1000승을 확인해봅시다.</span>
+
+<span class="mi">2</span> <span class="o">**</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 나눗셈과 관련된 산술연산자를 활용해봅시다.</span>
+<span class="c1"># 5와 2를 나눈 값을 출력해봅시다.</span>
+<span class="c1"># 5와 2를 나눈 값의 몫을 출력해봅시다.</span>
+<span class="c1"># 5와 2를 나눈 값을 integer로 형변환해봅시다.</span>
+<span class="c1"># 5와 2를 나눈 값의 나머지를 출력해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.5
+2
+2
+1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># divmod는 나눗셈과 관련된 함수입니다.</span>
+<span class="c1"># divmode() 에 5와 2를 넣고 결과를 print로 확인해봅시다.</span>
+<span class="c1"># 변수 quotient, remainder 에 divmode(5, 2)의 값을 할당해봅시다.</span>
+<span class="c1"># f-string을 활용하여 quorient와 remainder의 값을 출력해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">divmod</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">quotient</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;몫은 </span><span class="si">{</span><span class="n">quotient</span><span class="si">}</span><span class="s1">, 나머지는 </span><span class="si">{</span><span class="n">remainder</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 1)
+몫은 2, 나머지는 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 음수 양수 표현도 해봅시다.</span>
+<span class="c1"># 변수 positive_num 에 4를 할당하고 print할 때 -를 붙여서 print로 출력해봅시다.</span>
+<span class="c1"># 변수 negative_num 에 -4를 할당하고 print할 때 + 와 - 를 붙여서 각각을 print로 출력해봅시다.</span>
+
+<span class="n">positive_num</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="n">positive_num</span><span class="p">)</span>
+
+<span class="n">negative_num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">+</span><span class="n">negative_num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="n">negative_num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4
+-4
+4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>비교 연산자<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>우리가 수학에서 배운 연산자와 동일하게 값을 비교할 수 있습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>연산자</p></th>
+<th class="head"><p>내용</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td><p>미만</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td><p>이하</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p>초과</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td><p>이상</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td><p>같음</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td><p>같지않음</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">is</span></code></p></td>
+<td><p>객체 아이덴티티</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code></p></td>
+<td><p>부정된 객체 아이덴티티</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 숫자의 대소관계를 비교해봅시다.</span>
+<span class="c1"># 아무 정수 2개를 비교해봅시다.</span>
+
+<span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 다른 숫자인지 확인해봅시다.</span>
+<span class="c1"># 3의 정수형과 실수형이 같은지 비교해봅시다.</span>
+
+<span class="mf">3.0</span> <span class="o">==</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 같은 숫자인지 확인해봅시다.</span>
+<span class="c1"># 같은 숫자를 != 를 확인하여 비교해봅시다.</span>
+
+<span class="mi">3</span> <span class="o">!=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 문자열도 같은지 확인해봅시다.</span>
+<span class="c1"># 대문자 HI와 소문자 hi가 같은지 확인해 봅시다.</span>
+
+<span class="s1">&#39;HI&#39;</span> <span class="o">==</span> <span class="s1">&#39;hi&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>논리 연산자<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>연산자</p></th>
+<th class="head"><p>내용</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>a and b</p></td>
+<td><p>a와 b 모두 True시만 True</p></td>
+</tr>
+<tr class="row-odd"><td><p>a or b</p></td>
+<td><p>a 와 b 모두 False시만 False</p></td>
+</tr>
+<tr class="row-even"><td><p>not a</p></td>
+<td><p>True -&gt; False, False -&gt; True</p></td>
+</tr>
+</tbody>
+</table>
+<p>우리가 보통 알고 있는 <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> <code class="docutils literal notranslate"><span class="pre">|</span></code>은 파이썬에서 비트 연산자입니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># and과 관련해서 모든 case를 출력해봅시다.</span>
+<span class="c1"># True와 False를 이용하여 and 의 모든 경우의 수(4개)를 출력해봅시다. </span>
+<span class="c1"># (True and True), (True and False), ...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+False
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># or과 관련해서 모든 case를 출력해봅시다.</span>
+<span class="c1"># True와 False를 이용하여 or 의 모든 경우의 수(4개)를 출력해봅시다.</span>
+<span class="c1"># (True or True), (True or False), ...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># not을 활용해봅시다.</span>
+<span class="c1"># print를 이용하여 True 와 0의 not 값을 각각 확인해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>파이썬에서 and는 a가 거짓이면 a를 리턴하고, 참이면 b를 리턴합니다.</p></li>
+<li><p>파이썬에서 or은 a가 참이면 a를 리턴하고, 거짓이면 b를 리턴합니다.</p></li>
+</ul>
+<div class="section" id="short-circuit-evaluation">
+<h3>단축평가 (Short Circuit Evaluation)<a class="headerlink" href="#short-circuit-evaluation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>첫 번째 값이 확실할 때, 두 번째 값은 확인 하지 않습니다.</p></li>
+<li><p>조건문에서 뒷 부분을 판단하지 않아도 되기 때문에 속도가 향상됩니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 문자열 &#39;a&#39;와 &#39;b&#39;의 and 값이 무엇인지 확인해봅시다.</span>
+
+<span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="s1">&#39;b&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;b&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 문자열 &#39;a&#39;와 &#39;b&#39;의 or 값이 무엇인지 확인해봅시다.</span>
+
+<span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="s1">&#39;b&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vowels</span> <span class="o">=</span> <span class="s1">&#39;aeiou&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &#39;a&#39; and &#39;b&#39; 의 결과값이 vowels에 포함이 되었는지 확인해봅시다.</span>
+
+<span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">vowels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &#39;b&#39; and &#39;a&#39; 의 결과값이 vowels에 포함이 되었는지 확인해봅시다. </span>
+
+<span class="p">(</span><span class="s1">&#39;b&#39;</span> <span class="ow">and</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">vowels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code> 는 둘 다 True일 경우만 True이기 때문에 첫번째 값이 True라도 두번째 값을 확인해야 하기 때문에 ‘b’가 반환됩니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">or</span></code> 는 하나만 True라도 True이기 때문에 True를 만나면 해당 값을 바로 반환합니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># and의 단축평가(short-circuit evaluation)에 대해서 알아봅시다.</span>
+<span class="c1"># (3 and 5) , (3 and 0), (0 and 3), (0 and 0) 의 결과를 print로 출력해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">and</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">and</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">and</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">and</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+0
+0
+0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># or의 단축평가(short-circuit evaluation)에 대해서 알아봅시다.</span>
+<span class="c1"># (3 or 5) , (3 or 0), (0 or 3), (0 or 0) 의 결과를 print로 출력해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="ow">or</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">or</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+3
+3
+0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>복합 연산자<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>복합 연산자는 연산과 대입이 함께 이뤄집니다.</p>
+<p>가장 많이 활용되는 경우는 반복문을 통해서 갯수를 카운트하거나 할 때 활용됩니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>연산자</p></th>
+<th class="head"><p>내용</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>a += b</p></td>
+<td><p>a = a + b</p></td>
+</tr>
+<tr class="row-odd"><td><p>a -= b</p></td>
+<td><p>a = a - b</p></td>
+</tr>
+<tr class="row-even"><td><p>a *= b</p></td>
+<td><p>a = a * b</p></td>
+</tr>
+<tr class="row-odd"><td><p>a /= b</p></td>
+<td><p>a = a / b</p></td>
+</tr>
+<tr class="row-even"><td><p>a //= b</p></td>
+<td><p>a = a // b</p></td>
+</tr>
+<tr class="row-odd"><td><p>a %= b</p></td>
+<td><p>a = a % b</p></td>
+</tr>
+<tr class="row-even"><td><p>a **= b</p></td>
+<td><p>a = a ** b</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 복합연산자는 이럴 때 사용됩니다.</span>
+<span class="c1"># 0으로 할당된 변수 cnt 를</span>
+<span class="c1"># 반복문 while 을 이용하여 5회 반복하는데</span>
+<span class="c1"># 반복하는 동안 cnt를 print로 출력하고 cnt에 1씩 더해봅시다.</span>
+<span class="c1"># 단, cnt 를 더할때는 복합연산자를 사용해봅시다.</span>
+
+<span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cnt</span><span class="p">)</span>
+    <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>기타 주요 연산자<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="concatenation">
+<h3>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h3>
+<p>숫자가 아닌 자료형은 <code class="docutils literal notranslate"><span class="pre">+</span></code> 연산자를 통해 합칠 수 있습니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 문자열을 더해봅시다.(합쳐봅시다.)</span>
+<span class="c1"># 아무 문자 2개를 + 를 이용하여 합쳐봅시다.</span>
+
+<span class="s1">&#39;hi, &#39;</span> <span class="o">+</span> <span class="s1">&#39;bye!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hi, bye!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list 등 다른 데이터타입(컨테이너)에서도 활용 가능합니다.</span>
+<span class="c1"># 두 list [1, 2, 3] 과 [4, 5, 6] 을 + 를 이용하여 합쳐봅시다.</span>
+
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="containment-test">
+<h3>Containment Test<a class="headerlink" href="#containment-test" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">in</span></code> 연산자를 통해 요소가 속해있는지 여부를 확인할 수 있습니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 문자열안에 특정한 문자가 있는지 확인해봅시다.</span>
+<span class="c1"># 문자열 &#39;a&#39; 가 &#39;apple&#39; 에 속해있는지 확인해봅시다.</span>
+
+<span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;apple&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list 등 다른 데이터타입(컨테이너)에서도 활용 가능합니다.</span>
+<span class="c1"># 정수 1이 list [1, 2, 3]에 속해있는지 확인해봅시다.</span>
+
+<span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="identity">
+<h3>Identity<a class="headerlink" href="#identity" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">is</span></code> 연산자를 통해 동일한 object인지 확인할 수 있습니다. (OOP 파트에서 다시 학습하게 됩니다.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 파이썬에서 -5 부터 256 까지의 id는 동일합니다.</span>
+<span class="c1"># 변수 a에는 3을 변수 b에는 3을 할당해봅시다.</span>
+<span class="c1"># 그리고 a 와 b 가 동일한 object인지 확인해봅시다.</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 257 이후의 id 는 다릅니다.</span>
+<span class="c1"># 변수 a에는 257을 변수 b에는 257을 할당해봅시다.</span>
+<span class="c1"># 그리고 a 와 b 가 동일한 object인지 확인해봅시다.</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">257</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">257</span>
+<span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing-slicing">
+<h3>Indexing/Slicing<a class="headerlink" href="#indexing-slicing" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">[]</span></code>를 통한 값을 접근하고, <code class="docutils literal notranslate"><span class="pre">[:]</span></code>을 통해 슬라이싱할 수 있습니다. (Container 파트에서 자세하게 학습합니다.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 문자열을 인덱싱을 통해 값에 접근해봅시다.</span>
+<span class="c1"># 문자열 &#39;hi&#39;의 첫번째 값을 인덱싱으로 확인해봅시다.</span>
+
+<span class="s1">&#39;hi&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;h&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>연산자 우선순위<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">()</span></code>을 통한 grouping</p></li>
+<li><p>Slicing</p></li>
+<li><p>Indexing</p></li>
+<li><p>제곱연산자
+<code class="docutils literal notranslate"><span class="pre">**</span></code></p></li>
+<li><p>단항연산자
+<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code> (음수/양수 부호)</p></li>
+<li><p>산술연산자
+<code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code></p></li>
+<li><p>산술연산자
+<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
+<li><p>비교연산자, <code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">is</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">or</span></code></p></li>
+</ol>
+<p><a class="reference external" href="https://docs.python.org/ko/3/reference/expressions.html#operator-precedence">파이썬 문서</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 우선순위를 확인해봅시다.</span>
+<span class="c1"># -3 ** 6의 값을 확인해봅시다.</span>
+
+<span class="o">-</span><span class="mi">3</span> <span class="o">**</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-729
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># (-3) ** 6의 값을 확인해봅시다.</span>
+
+<span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">**</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>729
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="00_02.html" title="previous page">데이터 타입</a>
+    <a class='right-next' id="next-link" href="00_04.html" title="next page">[참고] 표현식 &amp; 문장</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hing9u<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
