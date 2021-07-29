@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practice 4 : 함수 3 &#8212; Hing9u&#39;s Python</title>
+    <title>Practice 10 : OOP &#8212; Hing9u&#39;s Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="04. 에러 &amp; 예외 처리" href="04_error_exception.html" />
-    <link rel="prev" title="Practice 3 : 함수 2" href="practice3%28function2%29.html" />
+    <link rel="prev" title="Practice 9 : OOP" href="practice9%28OOP1%29.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -162,16 +161,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="03_function.html">
    03. 함수
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="practice2%28function1%29.html">
      Practice 2 : 함수 1
@@ -182,8 +181,8 @@
      Practice 3 : 함수 2
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice4%28function3%29.html">
      Practice 4 : 함수 3
     </a>
    </li>
@@ -231,23 +230,23 @@
    06. 모듈
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="07_OOP.html">
    07. 객체지향 프로그래밍
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="practice9%28OOP1%29.html">
      Practice 9 : OOP
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice10%28OOP2%29.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Practice 10 : OOP
     </a>
    </li>
@@ -294,7 +293,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/practice4(function3).ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/practice10(OOP2).ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -319,7 +318,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/practice4(function3).ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/practice10(OOP2).ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -327,7 +326,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/practice4(function3).ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/practice10(OOP2).ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -347,8 +346,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   회문 판별
+  <a class="reference internal nav-link" href="#doggy">
+   Doggy
   </a>
  </li>
 </ul>
@@ -362,39 +361,63 @@
         
               <div>
                 
-  <div class="section" id="practice-4-3">
-<h1>Practice 4 : 함수 3<a class="headerlink" href="#practice-4-3" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="practice-10-oop">
+<h1>Practice 10 : OOP<a class="headerlink" href="#practice-10-oop" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>자료 구조</p>
+<div><p>OOP(Object-Oriented-Programming)</p>
 </div></blockquote>
-<div class="section" id="id1">
-<h2>회문 판별<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="doggy">
+<h2>Doggy<a class="headerlink" href="#doggy" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>회문 또는 팰린드롬은 거꾸로 읽어도 제대로 읽는 것과 같은 문장이나 낱말, 숫자, 문자열 등을 말한다.</p>
-<p>입력으로 짧은 영어단어 word가 주어질 때, 해당 단어가 회문이면 True 회문이 아니면 False를 반환하는 함수를 작성하시오.</p>
-<p>이때, 반복문(<code class="docutils literal notranslate"><span class="pre">while</span></code>)과 재귀 함수를 사용해서 각각 작성하시오.</p>
+<div><p>개의 속성과 행위를 정의하는 Doggy 클래스 만들기</p>
 </div></blockquote>
+<p><strong>구성 요소</strong></p>
+<ol class="simple">
+<li><p>초기화 메서드는 인자로 개의 이름과 견종을 받아서 인스턴스 변수에 할당한다.</p></li>
+<li><p>클래스 변수는 태어난 개의 숫자와 현재 있는 개의 숫자를 기록하는 변수로 구성한다.</p>
+<ul class="simple">
+<li><p>개가 태어나면 <code class="docutils literal notranslate"><span class="pre">num_of_dogs</span></code>와 <code class="docutils literal notranslate"><span class="pre">birth_of_dogs</span></code>의 값이 각 1씩 증가한다.</p></li>
+<li><p>개가 죽으면 <code class="docutils literal notranslate"><span class="pre">num_of_dogs</span></code>의 값이 1 감소한다.</p></li>
+</ul>
+</li>
+<li><p>개는 각자의 이름과 나이가 있다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bark()</span></code> 메서드를 호출하면 개는 짖을 수 있다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_status()</span></code> 메서드를 호출하면 <code class="docutils literal notranslate"><span class="pre">birth_of_dogs</span></code>와 <code class="docutils literal notranslate"><span class="pre">num_of_dogs</span></code>의 수를 출력할 수 있다.</p></li>
+</ol>
 <hr class="docutils" />
 <p>예시)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">)</span> <span class="c1">#=&gt; False</span>
-<span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;racecar&#39;</span><span class="p">)</span> <span class="c1">#=&gt; True</span>
-<span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;azza&#39;</span><span class="p">)</span> <span class="c1">#=&gt; True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="n">Doggy</span><span class="p">(</span><span class="s1">&#39;초코&#39;</span><span class="p">,</span> <span class="s1">&#39;푸들&#39;</span><span class="p">)</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">Doggy</span><span class="p">(</span><span class="s1">&#39;꽁이&#39;</span><span class="p">,</span> <span class="s1">&#39;말티즈&#39;</span><span class="p">)</span>
+<span class="n">d3</span> <span class="o">=</span> <span class="n">Doggy</span><span class="p">(</span><span class="s1">&#39;별이&#39;</span><span class="p">,</span> <span class="s1">&#39;시츄&#39;</span><span class="p">)</span>
+
+<span class="n">d1</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span> <span class="c1">#=&gt; 왈왈!</span>
+<span class="n">d2</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span> <span class="c1">#=&gt; 왈왈!</span>
+<span class="n">d3</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span> <span class="c1">#=&gt; 왈왈!</span>
+
+<span class="n">Doggy</span><span class="o">.</span><span class="n">get_status</span><span class="p">()</span> <span class="c1">#=&gt; Birth: 3, Current: 3</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># while</span>
-
-<span class="k">def</span> <span class="nf">is_pal_while</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="n">original_word</span> <span class="o">=</span> <span class="n">word</span>
-    <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">original_word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">reversed_word</span> <span class="o">+=</span> <span class="n">original_word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">original_word</span> <span class="o">=</span> <span class="n">original_word</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">reversed_word</span> <span class="o">==</span> <span class="n">word</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Doggy</span><span class="p">:</span>
+    <span class="n">num_of_dogs</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">birth_of_dogs</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+        <span class="n">Doggy</span><span class="o">.</span><span class="n">num_of_dogs</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">Doggy</span><span class="o">.</span><span class="n">birth_of_dogs</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Doggy</span><span class="o">.</span><span class="n">num_of_dogs</span> <span class="o">-=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;왈왈!&#39;</span><span class="p">)</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_status</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Birth: </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">birth_of_dogs</span><span class="si">}</span><span class="s1">, Current: </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">num_of_dogs</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -402,47 +425,23 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 해당 코드를 통해 올바른 결과가 나오는지 확인하시오.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;racecar&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;azza&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-True
-True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># recursive</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">Doggy</span><span class="p">(</span><span class="s1">&#39;초코&#39;</span><span class="p">,</span> <span class="s1">&#39;푸들&#39;</span><span class="p">)</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">Doggy</span><span class="p">(</span><span class="s1">&#39;꽁이&#39;</span><span class="p">,</span> <span class="s1">&#39;말티즈&#39;</span><span class="p">)</span>
+<span class="n">d3</span> <span class="o">=</span> <span class="n">Doggy</span><span class="p">(</span><span class="s1">&#39;별이&#39;</span><span class="p">,</span> <span class="s1">&#39;시츄&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">is_pal_recursive</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="n">is_pal_recursive</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 해당 코드를 통해 올바른 결과가 나오는지 확인하시오.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;racecar&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;azza&#39;</span><span class="p">))</span>
+<span class="n">d1</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span> <span class="c1">#=&gt; 왈왈!</span>
+<span class="n">d2</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span> <span class="c1">#=&gt; 왈왈!</span>
+<span class="n">d3</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span> <span class="c1">#=&gt; 왈왈!</span>
+
+<span class="n">Doggy</span><span class="o">.</span><span class="n">get_status</span><span class="p">()</span> <span class="c1">#=&gt; Birth: 3, Current: 3</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-True
-True
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>왈왈!
+왈왈!
+왈왈!
+Birth: 3, Current: 3
 </pre></div>
 </div>
 </div>
@@ -475,8 +474,7 @@ True
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="practice3%28function2%29.html" title="previous page">Practice 3 : 함수 2</a>
-    <a class='right-next' id="next-link" href="04_error_exception.html" title="next page">04. 에러 &amp; 예외 처리</a>
+    <a class='left-prev' id="prev-link" href="practice9%28OOP1%29.html" title="previous page">Practice 9 : OOP</a>
 
         </div>
         
