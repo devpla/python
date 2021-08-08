@@ -90,7 +90,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Part
+  PYTHON
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -471,7 +471,7 @@
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="c1"># 주석을 연습해봅시다.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 한줄 주석</span>
     
 <span class="c1"># print(&#39;hello&#39;) # 이 줄은 실행되지 않습니다.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
@@ -486,7 +486,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 여러줄 주석을 multiline string을 활용하여 연습해봅시다.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 여러줄 주석 (multiline string)</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">이것은</span>
@@ -535,7 +535,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문을 두번 써봅시다.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문을 두 번 쓸 경우</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span> 
@@ -551,8 +551,7 @@ world
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문 2개를 한 줄로 이어서 작성하면 어떻게 될까요?</span>
-<span class="c1"># 아래 코드를 실행시켜 결과를 확인해봅시다.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문 2개를 한 줄로 이어서 작성할 경우</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
 </pre></div>
@@ -569,11 +568,11 @@ world
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ;을 통해 코드를 구분시켜서 오류를 해결해봅시다.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ;을 통해 코드를 구분시켜 오류 해결</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
 
-<span class="c1"># 하지만 위와 같이 한줄에 두 개 이상의 코드를 작성하는 작성법은 잘 쓰지는 않습니다.</span>
+<span class="c1"># 하지만 위와 같이 한줄에 두 개 이상의 코드를 작성하는 작성법은 잘 쓰지 않습니다.</span>
 </pre></div>
 </div>
 </div>
@@ -622,7 +621,7 @@ world
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## PEP-8 가이드에 따르면 여러줄 문자열은 아래와 같이 쓰는 게 관례(convention)입니다.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># PEP-8 가이드에 따르면 여러줄 문자열은 아래와 같이 쓰는 게 관례(convention)입니다.</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;hello</span>
 <span class="s2">world&quot;&quot;&quot;</span><span class="p">)</span>
@@ -639,10 +638,8 @@ world
 <p><code class="docutils literal notranslate"><span class="pre">[]</span></code> <code class="docutils literal notranslate"><span class="pre">{}</span></code> <code class="docutils literal notranslate"><span class="pre">()</span></code>는 <code class="docutils literal notranslate"><span class="pre">\</span></code> 없이도 가능합니다.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 점심메뉴 lunch 에 대괄호를 사용한 list를 만들어봅시다.</span>
-<span class="c1"># list 대괄호 안에는 </span>
-<span class="c1"># &#39;짜장면&#39;, &#39;짬뽕&#39;, &#39;탕수육&#39;,&#39;군만두&#39;, &#39;물만두&#39;, &#39;왕만두&#39;를</span>
-<span class="c1"># 두 줄로 채워넣어 봅시다.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 대괄호를 사용한 list를 만들어봅시다.</span>
+<span class="c1"># list 대괄호 안에는 &#39;짜장면&#39;, &#39;짬뽕&#39;, &#39;탕수육&#39;,&#39;군만두&#39;, &#39;물만두&#39;, &#39;왕만두&#39;를 두 줄로 채워넣어 봅시다.</span>
 </pre></div>
 </div>
 </div>

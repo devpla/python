@@ -92,7 +92,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Part
+  PYTHON
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -1412,13 +1412,8 @@ json은 2살입니다.
 <div class="section" id="id18">
 <h3>3.3.3 정해지지 않은 여러 개의 인자 처리<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <p>우리가 주로 활용하는 <code class="docutils literal notranslate"><span class="pre">print()</span></code> 함수는 <a class="reference external" href="https://docs.python.org/ko/3.6/library/functions.html">파이썬 표준 라이브러리의 내장함수</a> 중 하나이며, 다음과 같이 구성되어있습니다.</p>
-<blockquote>
-<div><center>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;img src=&quot;https://user-images.githubusercontent.com/18046097/61181751-2b4ec100-a665-11e9-9a7c-a19a8c445cfa.png&quot;, alt=&quot;print&quot;&gt;
-</pre></div>
-</div>
-</center><div class="cell docutils container">
+<p><img alt="print" src="https://user-images.githubusercontent.com/18046097/61181751-2b4ec100-a665-11e9-9a7c-a19a8c445cfa.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 직접 실행해서 확인해봅시다.</span>
 
@@ -1555,13 +1550,8 @@ json은 2살입니다.
 <div><p><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> : 임의의 개수의 키워드 인자를 받음을 의미합니다</p>
 </div></blockquote>
 <p>우리가 dictionary를 만들 때 사용할 수 있는 <code class="docutils literal notranslate"><span class="pre">dict()</span></code> 함수는 <a class="reference external" href="https://docs.python.org/ko/3.6/library/functions.html">파이썬 표준 라이브러리의 내장함수</a> 중 하나이며, 다음과 같이 구성되어 있습니다.</p>
-<blockquote>
-<div><center>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;img src=&quot;https://user-images.githubusercontent.com/18046097/61181740-2984fd80-a665-11e9-94cf-7f5ab41873b1.png&quot;, alt=&quot;dictionary&quot;&gt;
-</pre></div>
-</div>
-</center><div class="cell docutils container">
+<p><img alt="dictionary" src="https://user-images.githubusercontent.com/18046097/61181740-2984fd80-a665-11e9-94cf-7f5ab41873b1.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 딕셔너리 생성 함수 예시입니다.(가변 키워드 인자 활용)</span>
 
@@ -1631,7 +1621,9 @@ json은 2살입니다.
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>위치인자와 <code class="docutils literal notranslate"><span class="pre">*agrs</span></code>, <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>를 함께 사용했을 때 올바른 순서</p>
-<p><code class="docutils literal notranslate"><span class="pre">my_info(x,</span> <span class="pre">y,</span> <span class="pre">*args,</span> <span class="pre">**kwargs)</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_info</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1686,10 +1678,10 @@ https://api.go.kr?sidoname=서울&amp;key=asdf&amp;
 <h2>3.4 함수와 스코프<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
 <p>함수는 코드 내부에 <strong>스코프</strong> (scope)를 생성합니다. 함수로 생성된 공간은 <strong>지역 스코프</strong> (local scope)라고 불리며, 그 외의 공간인 <strong>전역 스코프</strong> (global scope)와 구분됩니다.</p>
 <ul class="simple">
-<li><p><strong>전역 스코프</strong>(<code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">scope</span></code>): 코드 어디에서든 참조할 수 있는 공간</p></li>
-<li><p><strong>지역 스코프</strong>(<code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">scope</span></code>): 함수가 만든 스코프로 함수 내부에서만 참조할 수 있는 공간</p></li>
-<li><p><strong>전역 변수</strong>(<code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">variable</span></code>): 전역 스코프에 정의된 변수</p></li>
-<li><p><strong>지역 변수</strong>(<code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">variable</span></code>): 지역 스코프에 정의된 변수</p></li>
+<li><p><strong>전역 스코프</strong>(global scope): 코드 어디에서든 참조할 수 있는 공간</p></li>
+<li><p><strong>지역 스코프</strong>(local scope): 함수가 만든 스코프로 함수 내부에서만 참조할 수 있는 공간</p></li>
+<li><p><strong>전역 변수</strong>(global variable): 전역 스코프에 정의된 변수</p></li>
+<li><p><strong>지역 변수</strong>(local variable): 지역 스코프에 정의된 변수</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1770,7 +1762,7 @@ https://api.go.kr?sidoname=서울&amp;key=asdf&amp;
 
 <span class="c1"># 아래 코드를 실행하여 오류를 확인해보세요.</span>
 
-<span class="nb">print</span> <span class="o">=</span> <span class="s1">&#39;ssafy&#39;</span>
+<span class="nb">print</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1778,9 +1770,9 @@ https://api.go.kr?sidoname=서울&amp;key=asdf&amp;
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_12184</span><span class="o">/</span><span class="mf">753899690.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_14724</span><span class="o">/</span><span class="mf">2300548552.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span> <span class="o">=</span> <span class="s1">&#39;ssafy&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
 <span class="ne">----&gt; </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: &#39;str&#39; object is not callable
