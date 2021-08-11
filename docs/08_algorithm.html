@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practice 4 : 함수 3 &#8212; Hing9u&#39;s Python</title>
+    <title>00. 알고리즘 &#8212; Hing9u&#39;s Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,10 +50,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="04. 에러 &amp; 예외 처리" href="04_error_exception.html" />
-    <link rel="prev" title="Practice 3 : 함수 2" href="practice3%28function2%29.html" />
+    <link rel="next" title="01. 배열과 알고리즘 기본" href="09_array.html" />
+    <link rel="prev" title="Practice 10 : OOP" href="practice10%28OOP2%29.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,7 +95,7 @@
   PYTHON
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="00_00.html">
    00. Python 기초
@@ -163,16 +165,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="03_function.html">
    03. 함수
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="practice2%28function1%29.html">
      Practice 2 : 함수 1
@@ -183,8 +185,8 @@
      Practice 3 : 함수 2
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice4%28function3%29.html">
      Practice 4 : 함수 3
     </a>
    </li>
@@ -260,9 +262,9 @@
   ALGORITHMS
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="08_algorithm.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    00. 알고리즘
   </a>
  </li>
@@ -312,9 +314,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/practice4(function3).ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/08_algorithm.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -332,28 +334,6 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/practice4(function3).ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/practice4(function3).ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
@@ -365,9 +345,16 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   회문 판별
+  <a class="reference internal nav-link" href="#time-complexity">
+   시간 복잡도 (Time Complexity)
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o">
+     빅-오 (O) 표기법
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -380,90 +367,80 @@
         
               <div>
                 
-  <div class="section" id="practice-4-3">
-<h1>Practice 4 : 함수 3<a class="headerlink" href="#practice-4-3" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><p>자료 구조</p>
-</div></blockquote>
-<div class="section" id="id1">
-<h2>회문 판별<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>회문 또는 팰린드롬은 거꾸로 읽어도 제대로 읽는 것과 같은 문장이나 낱말, 숫자, 문자열 등을 말한다.</p>
-<p>입력으로 짧은 영어단어 word가 주어질 때, 해당 단어가 회문이면 True 회문이 아니면 False를 반환하는 함수를 작성하시오.</p>
-<p>이때, 반복문(<code class="docutils literal notranslate"><span class="pre">while</span></code>)과 재귀 함수를 사용해서 각각 작성하시오.</p>
-</div></blockquote>
-<hr class="docutils" />
-<p>예시)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">)</span> <span class="c1">#=&gt; False</span>
-<span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;racecar&#39;</span><span class="p">)</span> <span class="c1">#=&gt; True</span>
-<span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;azza&#39;</span><span class="p">)</span> <span class="c1">#=&gt; True</span>
+  <div class="section" id="id1">
+<h1>00. 알고리즘<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>(명) <strong>알고리즘</strong> : 유한한 단계를 통해 문제를 해결하기 위한 절차나 방법이다. 주로 컴퓨터용어로 쓰이며, 컴퓨터가 어떤 일을 수행하기 위한 단계적 방법을 말한다.</p></li>
+<li><p>간단하게 다시 말하면 어떠한 문제를 해결하기 위한 절차라고 볼 수 있다.</p></li>
+<li><p>컴퓨터 분야에서 알고리즘을 표현하기 위한 방법은 크게 두 가지</p>
+<ul>
+<li><p><strong>슈더코드(Pseudocode)와 순서도</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def CalcSum(n) :
+	sum ← 0
+	for i in range (1, n + 1) :
+		sum ← sum + i;
+	return sum;
 </pre></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># while</span>
-
-<span class="k">def</span> <span class="nf">is_pal_while</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="n">original_word</span> <span class="o">=</span> <span class="n">word</span>
-    <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">original_word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">reversed_word</span> <span class="o">+=</span> <span class="n">original_word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">original_word</span> <span class="o">=</span> <span class="n">original_word</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">reversed_word</span> <span class="o">==</span> <span class="n">word</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<p><img alt="image-20210811231122986" src="../_images/image-20210811231122986.png" /></p>
+</li>
+</ul>
+</li>
+<li><p><strong>알고리즘 성능 측정</strong></p>
+<ul class="simple">
+<li><p>APS 과정의 목표 중의 하나는 보다 좋은 알고리즘을 이해하고 활용하는 것이다.</p></li>
+</ul>
+</li>
+<li><p><strong>무엇이 좋은 알고리즘인가?</strong></p>
+<ol class="simple">
+<li><p><strong>정확성</strong> : 얼마나 정확하게 동작하는가</p></li>
+<li><p><strong>작업량</strong> : 얼마나 적은 연산으로 원하는 결과를 얻어내는가</p></li>
+<li><p><strong>메모리 사용량</strong> : 얼마나 적은 메모리를 사용하는가</p></li>
+<li><p><strong>단순성</strong> : 얼마나 단순한가</p></li>
+<li><p><strong>최적성</strong> : 더 이상 개선할 여지없이 최적화되었는가</p></li>
+</ol>
+</li>
+<li><p>주어진 문제를 해결하기 위해 여러 개의 다양한 알고리즘이 가능</p>
+<p>-&gt; 어떤 알고리즘을 사용해야 하는가?</p>
+</li>
+<li><p><strong>알고리즘의 성능 분석 필요</strong></p>
+<ul class="simple">
+<li><p>많은 문제에서 성능 분석의 기준으로 알고리즘의 작업량을 비교한다.</p></li>
+</ul>
+</li>
+<li><p>알고리즘의 작업량을 표현할 때 시간복잡도로 표현한다</p></li>
+</ul>
+<div class="section" id="time-complexity">
+<h2>시간 복잡도 (Time Complexity)<a class="headerlink" href="#time-complexity" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>실제 걸리는 시간을 측정</p></li>
+<li><p>실행되는 명령문의 개수를 계산</p></li>
+</ul>
+<div class="section" id="o">
+<h3>빅-오 (O) 표기법<a class="headerlink" href="#o" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>빅-오 표기법 (Big-Oh Notation)</p></li>
+<li><p>시간 복잡도 함수 중에서 가장 큰 영향력을 주는 n에 대한 항만을 표시</p></li>
+<li><p>계수(Coefficient)는 생략하여 표시</p></li>
+<li><p>예를 들어</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">O</span><span class="p">(</span><span class="mi">3</span><span class="n">n</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">O</span><span class="p">(</span><span class="mi">3</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">O</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+			<span class="o">-----</span>   <span class="o">----</span>
+	  <span class="n">최고차항</span> <span class="n">선택</span>   <span class="n">계수</span> <span class="n">제거</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 해당 코드를 통해 올바른 결과가 나오는지 확인하시오.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;racecar&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_while</span><span class="p">(</span><span class="s1">&#39;azza&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-True
-True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># recursive</span>
-
-<span class="k">def</span> <span class="nf">is_pal_recursive</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="n">is_pal_recursive</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 해당 코드를 통해 올바른 결과가 나오는지 확인하시오.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;racecar&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_pal_recursive</span><span class="p">(</span><span class="s1">&#39;azza&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-True
-True
-</pre></div>
-</div>
-</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(O(2n^{2} + 10n + 100) = O(n^{2})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(O(4) = O(1)\)</span></p></li>
+</ul>
+</li>
+<li><p>n개의 데이터를 입력 받아 저장한 후 각 데이터에 1씩 증가시킨 후 각 데이터를 화면에 출력하는 알고리즘의 시간 복잡도는 ?</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(O(n)\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="빅-오 표기법(Big-O Notation) &amp; 시간, 공간복잡도(Time, Space Complexity)" src="https://media.vlpt.us/images/gillog/post/1506c01a-ba40-4255-b549-03c8bb038049/1.png" /></p>
+<p><img alt="image-20210812000201500" src="../_images/image-20210812000201500.png" /></p>
 </div>
 </div>
 </div>
@@ -493,8 +470,8 @@ True
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="practice3%28function2%29.html" title="previous page">Practice 3 : 함수 2</a>
-    <a class='right-next' id="next-link" href="04_error_exception.html" title="next page">04. 에러 &amp; 예외 처리</a>
+    <a class='left-prev' id="prev-link" href="practice10%28OOP2%29.html" title="previous page">Practice 10 : OOP</a>
+    <a class='right-next' id="next-link" href="09_array.html" title="next page">01. 배열과 알고리즘 기본</a>
 
         </div>
         
