@@ -54,7 +54,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="00. 알고리즘" href="08_algorithm.html" />
+    <link rel="next" title="02. 문자열 (string)" href="10_string.html" />
+    <link rel="prev" title="01. 알고리즘" href="08_algorithm.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -264,12 +265,17 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="08_algorithm.html">
-   00. 알고리즘
+   01. 알고리즘
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    01. 배열과 알고리즘 기본
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_string.html">
+   02. 문자열 (string)
   </a>
  </li>
 </ul>
@@ -631,6 +637,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id38">
      연습문제 1.5 달팽이 숫자
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id39">
+     사다리 문제
     </a>
    </li>
   </ul>
@@ -1562,6 +1573,42 @@ n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1
 <p>다음 그림의 왼쪽과 같이 2차 배열을 초기화한 후 오른쪽 2차 배열과 같이 정렬하여 2차 배열형태로 출력하시오.</p>
 <p><img alt="image-20210811143806976" src="../_images/image-20210811143806976.png" /></p>
 </div>
+<div class="section" id="id39">
+<h3>사다리 문제<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">start</span><span class="p">):</span> 				           <span class="c1"># 도착지에서 위로 올라가는 함수</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">99</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">start</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  				           <span class="c1"># 맨 윗줄에 도착하기 전까지 위로 올라감</span>
+        <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>  				           <span class="c1"># 위로 한 칸 이동</span>
+        <span class="k">if</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">ladder</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>  	   <span class="c1"># 왼쪽 칸이 있고 1이면</span>
+            <span class="k">while</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">ladder</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>  <span class="c1"># 사다리를 벗어나거나 0일 때 까지</span>
+                <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>                     <span class="c1"># 왼쪽 이동</span>
+        <span class="k">elif</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">99</span> <span class="ow">and</span> <span class="n">ladder</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>      <span class="c1"># 오른쪽 칸이 있고 1이면</span>
+        	<span class="k">while</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">99</span> <span class="n">ladder</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>	   <span class="c1"># 사다리를 벗어나거나 0일 떄 까지</span>
+                <span class="n">j</span> <span class="o">+=</span><span class="mi">1</span>                      <span class="c1"># 오른쪽 이동</span>
+        <span class="c1"># 좌우가 0이면 위로      </span>
+    <span class="k">return</span> <span class="n">j</span>  <span class="c1"># 0번 행에 도착했을 때의 열(출발지) 리턴</span>
+
+
+<span class="n">T</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">tc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">ladder</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+
+    <span class="c1"># 도착지 검색</span>
+    <span class="n">goal</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ladder</span><span class="p">[</span><span class="mi">99</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">goal</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;#</span><span class="si">{}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span> <span class="n">ans</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -1590,7 +1637,8 @@ n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="08_algorithm.html" title="previous page">00. 알고리즘</a>
+    <a class='left-prev' id="prev-link" href="08_algorithm.html" title="previous page">01. 알고리즘</a>
+    <a class='right-next' id="next-link" href="10_string.html" title="next page">02. 문자열 (string)</a>
 
         </div>
         
