@@ -1,0 +1,3170 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07. 객체지향 프로그래밍 &#8212; Hing9u&#39;s Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Practice 9 : OOP" href="practice9%28OOP1%29.html" />
+    <link rel="prev" title="06. 모듈" href="06_module.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Hing9u's Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   개요
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  PYTHON
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="00_00.html">
+   00. Python 기초
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_01.html">
+     변수와 식별자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_02.html">
+     데이터 타입
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_03.html">
+     연산자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_04.html">
+     [참고] 표현식 &amp; 문장
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_05.html">
+     [정리] 변수와 자료형
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_data_container.html">
+   01. 컨테이너
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_00.html">
+   02. 제어문
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_01.html">
+     2.1 조건문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_02.html">
+     2.2 반복문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice1%28intro%2C%20container%29.html">
+     Practice 1 : 데이터 &amp; 제어문
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="03_function.html">
+   03. 함수
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice2%28function1%29.html">
+     Practice 2 : 함수 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice3%28function2%29.html">
+     Practice 3 : 함수 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice4%28function3%29.html">
+     Practice 4 : 함수 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_error_exception.html">
+   04. 에러 &amp; 예외 처리
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="05_data_structure.html">
+   05. 데이터 구조
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice5%28ds1%29.html">
+     Practice 5 : 자료 구조
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice6%28ds2%29.html">
+     Practice 6 : 자료 구조
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice7%28ds3%29.html">
+     Practice 7 : 자료 구조
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice8%28ds4%29.html">
+     Practice 8 : 자료 구조
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_module.html">
+   06. 모듈
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   07. 객체지향 프로그래밍
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice9%28OOP1%29.html">
+     Practice 9 : OOP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice10%28OOP2%29.html">
+     Practice 10 : OOP
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  ALGORITHMS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_algorithm.html">
+   01. 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_array.html">
+   01. 배열과 알고리즘 기본
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_string.html">
+   02. 문자열 (string)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_stack.html">
+   03. 스택 (stack)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/07_OOP.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/07_OOP.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/07_OOP.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   7.1 객체
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     7.1.1 타입과 인스턴스
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#type">
+       타입 (Type)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instance">
+       인스턴스 (Instance)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     7.1.2 속성과 메서드
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#attribute">
+       속성 (Attribute)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#method">
+       메서드 (Method)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     7.1.3 객체 비교
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ==
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#is">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         is
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   7.2 객체지향 프로그래밍
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vs-object">
+     7.2.1 절차 중심 vs. Object 중심
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#object">
+     7.2.2 Object 중심의 장점
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   7.3 클래스와 인스턴스
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#class">
+     7.3.1 클래스 (Class) 생성
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     7.3.2 인스턴스 (Instance) 생성
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     7.3.3 메서드 (Method) 정의
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#self">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         self
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#constructor">
+       생성자 (constructor) 메서드
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#destructor">
+       소멸자 (destructor) 메서드
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     7.3.4 속성 (Attribute) 정의
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     7.3.5 매직 (스페셜) 메서드
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#str-self">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         __str__(self)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       실습
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   7.4 변수, 이름공간, 메서드
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     7.4.1 인스턴스 &amp; 클래스 변수
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id16">
+       인스턴스 변수
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id17">
+       클래스 변수
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id18">
+       비교
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id19">
+         클래스 변수와 인스턴스 변수의 함정
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     7.4.2 인스턴스 &amp; 클래스간의 이름공간
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id21">
+       이름공간 탐색 순서
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     7.4.3 메서드의 종류
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instance-method">
+       인스턴스 메서드 (instance method)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#class-method">
+       클래스 메서드 (class method)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#static-method">
+       스태틱 메서드 (static method)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     7.4.4 비교 정리
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id24">
+       인스턴스와 메서드
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id25">
+       클래스와 메서드
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#puppy">
+       [코드예시] Puppy
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id26">
+   7.5 상속
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inheritance">
+     7.5.1 상속 (Inheritance) 이란?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#issubclass-class-classinfo">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         issubclass(class,
+        </span>
+        <span class="pre">
+         classinfo)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#isinstance-object-classinfo">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         isinstance(object,
+        </span>
+        <span class="pre">
+         classinfo)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#super">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         super()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rectangle-square">
+       [실습] Rectangle &amp; Square
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id27">
+     7.5.2 메서드 오버라이딩
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id28">
+     7.5.3 상속관계에서의 이름공간
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#person-animal">
+       [연습] Person &amp; Animal (메서드 오버라이딩)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id29">
+     7.5.4 다중 상속
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>07. 객체지향 프로그래밍<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="admonition-title">객체지향 프로그래밍</p>
+<ul class="simple">
+<li><p>객체(Object)</p></li>
+<li><p>객체지향프로그래밍(Object Oriented Programming)</p></li>
+<li><p>클래스(Class)와 인스턴스(Instance)</p></li>
+<li><p>변수, 이름공간, 메서드</p></li>
+<li><p>상속</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>7.1 객체<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Python에서 <strong>모든 것은 객체(object)</strong> 입니다.</p>
+<p>모든 객체는 <strong>타입(type), 속성(attribute), 조작법(method)</strong> 을 가집니다.</p>
+</div></blockquote>
+<div class="note admonition">
+<p class="admonition-title">객체(Object)의 특징</p>
+<ul class="simple">
+<li><p><strong>타입(type)</strong>: 어떤 연산자(operator)와 조작(method)이 가능한가?</p></li>
+<li><p><strong>속성(attribute)</strong>: 어떤 상태(데이터)를 가지는가?</p></li>
+<li><p><strong>조작법(method)</strong>: 어떤 행위(함수)를 할 수 있는가?</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>7.1.1 타입과 인스턴스<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>type</p></th>
+<th class="head"><p>instance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">''</span></code>, <code class="docutils literal notranslate"><span class="pre">'hello'</span></code>, <code class="docutils literal notranslate"><span class="pre">'123'</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[]</span></code>, <code class="docutils literal notranslate"><span class="pre">['a',</span> <span class="pre">'b']</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dict</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{}</span></code>, <code class="docutils literal notranslate"><span class="pre">{'key':</span> <span class="pre">'value'}</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="type">
+<h4>타입 (Type)<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>공통된 속성 (attribute)과 조작법 (method)을 가진 객체들의 분류</p></li>
+</ul>
+</div>
+<div class="section" id="instance">
+<h4>인스턴스 (Instance)<a class="headerlink" href="#instance" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>특정 타입(type)의 실제 데이터 예시(instance)입니다.</p></li>
+<li><p>파이썬에서 모든 것은 객체이고, <strong>모든 객체는 특정 타입의 인스턴스</strong>입니다.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># a, b는 10, 20을 가리키는 이름         -- namespace</span>
+<span class="c1"># 10, 20 (a, b가 가리키는 대상)은 객체   -- object</span>
+<span class="c1"># 10, 20 은 int 타입(type)의 인스턴스</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a 의 type이 int형인지 is 연산자로 확인해 봅시다.</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">int</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">int()</p>
+<p><code class="docutils literal notranslate"><span class="pre">int()</span></code>는 <code class="docutils literal notranslate"><span class="pre">int</span></code> Instance를 만드는 함수입니다.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># isinstance 함수를 활용해 확인해 봅시다.</span>
+
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>7.1.2 속성과 메서드<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>객체의 속성(상태, 데이터)과 조작법(함수)을 명확히 구분해 봅시다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>type</p></th>
+<th class="head"><p>attributes</p></th>
+<th class="head"><p>methods</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">complex</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.real</span></code>, <code class="docutils literal notranslate"><span class="pre">.imag</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p>_</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.capitalize()</span></code>, <code class="docutils literal notranslate"><span class="pre">.join()</span></code>, <code class="docutils literal notranslate"><span class="pre">.split()</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td><p>_</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.append()</span></code>, <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code>, <code class="docutils literal notranslate"><span class="pre">.sort()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dict</span></code></p></td>
+<td><p>_</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.keys()</span></code>, <code class="docutils literal notranslate"><span class="pre">.values()</span></code>, <code class="docutils literal notranslate"><span class="pre">.items()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="attribute">
+<h4>속성 (Attribute)<a class="headerlink" href="#attribute" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>속성(attribute)은 객체(object)의 상태/데이터를 뜻합니다.</p></li>
+</ul>
+<p><strong>활용법</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">객체</span><span class="o">&gt;.&lt;</span><span class="n">속성</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>예시</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span><span class="o">.</span><span class="n">real</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">complex</span></code> 타입 인스턴스가 가진 속성을 확인해봅시다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 복소수를 만들어보고, 타입을 출력해봅시다.</span>
+
+<span class="n">img_number</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">img_number</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;complex&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 허수부랑 실수부 .real과 .imag 속성을 통해 각각 출력해봅시다. </span>
+<span class="c1"># complex 객체의 실수 속성과 허수 속성이라고도 표현 가능합니다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">img_number</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">img_number</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+4.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="method">
+<h4>메서드 (Method)<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>특정 객체에 적용할 수 있는 행위(behavior)를 뜻 합니다.</p></li>
+</ul>
+<p><strong>활용법</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">객체</span><span class="o">&gt;.&lt;</span><span class="n">메서드</span><span class="o">&gt;</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>예시</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> type의 인스턴스에 적용 가능한 조작법(method)을 확인해 봅시다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 리스트를 하나 만들고 정렬해봅시다. </span>
+<span class="c1"># 리스트 타입 객체의 sort() 메서드로 정렬 가능합니다.</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list 타입의 객체들이 할 수 있는 것들을 알아봅시다. (list 타입 객체가 가지고 있는 모든 속성과 메서드를 보여줍니다.)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="nb">list</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__add__&#39;, &#39;__class__&#39;, &#39;__class_getitem__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__delitem__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__iadd__&#39;, &#39;__imul__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__reversed__&#39;, &#39;__rmul__&#39;, &#39;__setattr__&#39;, &#39;__setitem__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;append&#39;, &#39;clear&#39;, &#39;copy&#39;, &#39;count&#39;, &#39;extend&#39;, &#39;index&#39;, &#39;insert&#39;, &#39;pop&#39;, &#39;remove&#39;, &#39;reverse&#39;, &#39;sort&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 + 1</span>
+
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>7.1.3 객체 비교<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h4><code class="docutils literal notranslate"><span class="pre">==</span></code><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>동등한 (equal)</p></li>
+<li><p>변수가 참조하는 객체가 동등한 (내용이 같은) 경우 True</p></li>
+<li><p>두 객체가 같아 보이지만 실제로 동일한 대상을 가리키고 있다고 확인해 준 것은 아님</p></li>
+</ul>
+</div>
+<div class="section" id="is">
+<h4><code class="docutils literal notranslate"><span class="pre">is</span></code><a class="headerlink" href="#is" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>동일한 (identical)</p></li>
+<li><p>두 변수가 동일한 객체를 가리키는 경우 True</p></li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id7">
+<h2>7.2 객체지향 프로그래밍<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p><strong>객체지향 프로그래밍</strong> (Object-Oriented Programming) : Object가 중심(oriented)이 되는 프로그래밍</p>
+<div class="tip admonition">
+<p class="admonition-title">wikipedia - 객체지향 프로그래밍</p>
+<p>객체 지향 프로그래밍(영어: Object-Oriented Programming, OOP)은 컴퓨터 프로그래밍의 패러다임의 하나입니다.</p>
+<p>객체 지향 프로그래밍은 컴퓨터 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 여러 개의 독립된 단위, 즉 “객체”들의 모임으로 파악하고자 하는 것입니다.</p>
+</div>
+<div class="section" id="vs-object">
+<h3>7.2.1 절차 중심 vs. Object 중심<a class="headerlink" href="#vs-object" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>프로그래밍 패러다임: 어떻게 프로그램을 작성할 것인가</p>
+</div></blockquote>
+</div>
+<div class="section" id="object">
+<h3>7.2.2 Object 중심의 장점<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">wikipedia - 객체지향 프로그래밍</p>
+<p>객체 지향 프로그래밍은 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용됩니다.</p>
+<p>또한 프로그래밍을 더 배우기 쉽게 하고 소프트웨어 개발과 보수를 간편하게 하며, 보다 직관적인 코드 분석을 가능하게 하는 장점을 갖고 있습니다.</p>
+</div>
+<ul class="simple">
+<li><p>코드의 <strong>직관성</strong></p></li>
+<li><p>활용의 <strong>용이성</strong></p></li>
+<li><p>변경의 <strong>유연성</strong></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id8">
+<h2>7.3 클래스와 인스턴스<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>클래스 (<code class="docutils literal notranslate"><span class="pre">class</span></code>) : 객체들의 분류(class)를 정의할 때 쓰이는 키워드</p>
+</div></blockquote>
+<blockquote>
+<div><p>인스턴스 (<code class="docutils literal notranslate"><span class="pre">instance</span></code>) : 객체의 실체와 예, 인스턴스(instance)를 활용</p>
+</div></blockquote>
+<div class="section" id="class">
+<h3>7.3.1 클래스 (Class) 생성<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>클래스 생성은 <code class="docutils literal notranslate"><span class="pre">class</span></code> 키워드와 정의하고자 하는 <code class="docutils literal notranslate"><span class="pre">&lt;클래스의</span> <span class="pre">이름&gt;</span></code>으로 가능합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;클래스의</span> <span class="pre">이름&gt;</span></code>은 <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code>로 정의합니다.</p></li>
+<li><p>클래스 내부에는 데이터와 함수를 정의할 수 있고, 이때 데이터는 <strong>속성(attribute)</strong> 정의된 함수는 **메서드(method)**로 부릅니다.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>class &lt;클래스이름&gt;:
+    &lt;statement&gt;
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
+    <span class="n">statement</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 이라는 이름의 class를 정의해봅시다. </span>
+<span class="c1"># 아래와 같이 &quot;&quot;&quot;(docstring)을 통해 설명(doc)도 함께 정의해 봅시다.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is DOCSTRING</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    이것은 Person 클래스(class) 입니다.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Person</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    이것은 Person 클래스(class) 입니다.
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">Person</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 정의한 Person 클래스의 type을 출력해 봅시다</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">Person</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>7.3.2 인스턴스 (Instance) 생성<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>정의된 클래스(<code class="docutils literal notranslate"><span class="pre">class</span></code>)에 속하는 객체를 해당 클래스의 인스턴스(instance)라고 합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Person</span></code> 클래스의 인스턴스는 <code class="docutils literal notranslate"><span class="pre">Person()</span></code>을 호출함으로써 생성됩니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code> 함수를 통해 생성된 객체의 클래스를 확인할 수 있습니다.</p></li>
+</ul>
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 인스턴스 = 클래스()</span>
+<span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">person1</span></code>은 사용자가 정의한(user-defined) <code class="docutils literal notranslate"><span class="pre">Person</span></code>이라는 데이터 타입(data type)의 인스턴스입니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스의 인스턴스 p1과 p2를 생성해봅시다.</span>
+<span class="c1"># 두 인스턴스의 type을 출력하고</span>
+<span class="c1"># 우리가 위에서 정의한 doc를 p1.__doc__, p2.__doc__ 속성을 통해 출력해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">p1</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">p2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">,</span> <span class="n">p2</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;__main__.Person&#39;&gt; &lt;class &#39;__main__.Person&#39;&gt;
+
+    이것은 Person 클래스(class) 입니다.
+     
+    이것은 Person 클래스(class) 입니다.
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>7.3.3 메서드 (Method) 정의<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>특정 데이터 타입(또는 클래스)의 객체에 공통적으로 적용 가능한 행위(behavior)들을 의미합니다.</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="c1"># 메서드(method)</span>
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    <span class="c1"># 인자로 self를 정의해봅시다.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;안녕&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위와 똑같이 Person 클래스와 talk() 메서드를 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="c1"># 메서드(method)</span>
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    <span class="c1"># 인자로 self를 정의해봅시다.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;안녕&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스의 인스턴스 p1, p2를 생성하고 각각 talk 메서드를 실행해봅시다</span>
+
+<span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(),</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+<span class="n">p2</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안녕
+안녕
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 메서드도 함수이기 때문에 추가적인 인자를 받을 수 있습니다.</span>
+<span class="c1"># Person 클래스를 재정의 하며 talk() 메서드를 정의하고, eat() 메서드를 추가로 정의해봅시다.</span>
+<span class="c1"># eat() 메서드는 food 라는 이름의 인자를 받아서 출력합니다.</span>
+<span class="c1"># 추가적인 인자를 받기 위해서는 아래와 같은 모습으로 코드가 작성되어야 합니다.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">method1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">method2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 기본 인자, 가변 인자 리스트 등 함수의 인자와 동일하게 매개변수를 정의할 수 있습니다.</span>
+<span class="c1"># Person 클래스를 재정의하며, eat() 메서드를 정의할 때 food 인자의 기본 값을 원하는 음식으로 설정해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="c1"># 메서드(method)</span>
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    <span class="c1"># 인자로 self를 정의해봅시다.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;안녕&#39;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">food</span> <span class="o">=</span> <span class="s1">&#39;치킨 먹고싶다..&#39;</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">food</span><span class="si">}</span><span class="s1"> 냠냠&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스의 인스턴스 p1을 생성하고 eat() 메서드를 인자 있이/없이 두번 호출해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">eat</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">eat</span><span class="p">(</span><span class="s1">&#39;치킨&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>치킨 먹고싶다.. 냠냠
+치킨 냠냠
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="self">
+<h4><code class="docutils literal notranslate"><span class="pre">self</span></code><a class="headerlink" href="#self" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>인스턴스 자신(self)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Python에서 인스턴스 메서드는 <strong>호출 시 첫번째 인자로 인스턴스 자신이 전달</strong>되게 설계되었습니다.</p></li>
+<li><p>보통 매개변수명으로 <code class="docutils literal notranslate"><span class="pre">self</span></code>를 첫번째 인자로 정의 (다른 이름도 가능하지만 추천하지는 않습니다.)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래의 Person 클래스를 통해서 self가 무엇인지 확인해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    
+    <span class="c1"># self =&gt; 인스턴스 메서드의 1번 인자</span>
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스의 인스턴스 p1을 생성하고 test() 메서드를 호출하여 self를 확인해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
+<span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Person object at 0x000001E400E77670&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Person at 0x1e400e77670&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># p1을 출력하여 비교해봅시다.</span>
+
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p2</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
+<span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Person object at 0x000001E400E774C0&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Person at 0x1e400e774c0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="constructor">
+<h4>생성자 (constructor) 메서드<a class="headerlink" href="#constructor" title="Permalink to this headline">¶</a></h4>
+<p>인스턴스 객체가 생성될 때 호출되는 함수. 반드시 <code class="docutils literal notranslate"><span class="pre">__init__</span></code> 이라는 이름으로 정의.</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;생성될 때 자동으로 호출되는 메서드입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>생성자를 활용하면 인스턴스가 생성될 때 인스턴스의 속성을 정의할 수 있습니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 자신의 이름을 인자로 넘기며 Person의 인스턴스 p1를 생성해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># talk() 메서드를 호출해 봅시다.</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am john
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># talk 메서드를 클래스에서 메서드를 실행해봅시다. self는 정말 빈자리일까요?</span>
+
+<span class="n">Person</span><span class="o">.</span><span class="n">talk</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="c1"># 확인용 코드입니다. 이렇게 작성하지 않습니다.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am john
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="destructor">
+<h4>소멸자 (destructor) 메서드<a class="headerlink" href="#destructor" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>인스턴스 객체가 소멸(파괴)되기 직전에 호출되는 함수. 반드시 <code class="docutils literal notranslate"><span class="pre">__del__</span></code> 이라는 이름으로 정의.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;소멸될 때 자동으로 호출되는 메서드입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 생성자와 소멸자를 만들어봅시다.</span>
+<span class="c1"># 생성자 메서드는 __init__으로, 소멸자 메서드는 __del__라는 이름으로 정의합니다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;응애!&#39;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;떠날게..&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p3</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">p3</span>  <span class="c1"># 변수 삭제</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>응애!
+떠날게..
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p4</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p4</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>  <span class="c1"># 변수 재할당</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>응애!
+떠날게..
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p5</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p6</span> <span class="o">=</span> <span class="n">p5</span>  <span class="c1"># 인스턴스가 어딘가에 남겨져 있을 경우 호출되지 않습니다.</span>
+<span class="k">del</span> <span class="n">p5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>응애!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p6</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>떠날게..
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>7.3.4 속성 (Attribute) 정의<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>특정 데이터 타입(또는 클래스)의 객체들이 가지게 될 상태/데이터를 의미합니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">self.&lt;속성명&gt;</span> <span class="pre">=</span> <span class="pre">&lt;값&gt;</span></code> 혹은 <code class="docutils literal notranslate"><span class="pre">&lt;인스턴스&gt;.&lt;속성명&gt;</span> <span class="pre">=</span> <span class="pre">&lt;값&gt;</span></code>으로 설정합니다</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;안녕, 나는 </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 인스턴스의 속성, 즉 개별 인스턴스들이 사용할 데이터를 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># 일반적으로 초기화할 때 설정합니다.</span>
+        
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;안녕, 나는 </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 속성 정의는 꼭 생성자(__init__) 메서드에 작성해야 하지는 않지만, 일반적으로 생성자 메서드에 많이 작성합니다.</span>
+<span class="c1"># 생성자 메서드를 통해 생성과 동시에 인스턴스 속성에 값을 할당할 수 있기 때문입니다.</span>
+<span class="c1"># 새로운 Person의 인스턴스 p1을 이름과 함께 초기화 하고, 이름을 출력해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;아이유&#39;</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안녕, 나는 아이유
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 인스턴스 속성의 값을 변경할 수도 있습니다.</span>
+<span class="c1"># 위에서 생성한 p1 인스턴스의 name을 다른 값으로 할당해보고, talk 메서드를 실행해봅시다.</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;이지은&#39;</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안녕, 나는 이지은
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 생성자 메서드도 함수이기 때문에, 인자의 개수가 맞지 않으면 에러가 발생합니다.</span>
+<span class="c1"># name인자 없이 새로운 Person의 인스턴스 p1을 생성해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_9912</span><span class="o">/</span><span class="mf">1046008949.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># name인자 없이 새로운 Person의 인스턴스 p1을 생성해봅시다.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: __init__() missing 1 required positional argument: &#39;name&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위에서 생성한 인스턴스 p1을 del 연산자를 사용해 소멸시켜봅시다.</span>
+
+<span class="k">del</span> <span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>7.3.5 매직 (스페셜) 메서드<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>더블언더스코어(<code class="docutils literal notranslate"><span class="pre">__</span></code>)가 있는 메서드는 특별한 일을 하기 위해 만들어진 메서드이기 때문에 <code class="docutils literal notranslate"><span class="pre">스페셜</span> <span class="pre">메서드</span></code> 혹은 <code class="docutils literal notranslate"><span class="pre">매직</span> <span class="pre">메서드</span></code>라고 불립니다.</p></li>
+<li><p>매직(스페셜) 메서드 형태: <code class="docutils literal notranslate"><span class="pre">__someting__</span></code></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="s1">&#39;__str__(self)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__len__(self)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__repr__(self)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__lt__(self, other)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__le__(self, other)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__eq__(self, other)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__ne__(self, other)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__gt__(self, other)&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;__ge__(self, other)&#39;</span><span class="p">,</span>
+</pre></div>
+</div>
+<div class="section" id="str-self">
+<h4><code class="docutils literal notranslate"><span class="pre">__str__(self)</span></code><a class="headerlink" href="#str-self" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;객체 출력(print)시 보여줄 내용&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>특정 객체를 출력(<code class="docutils literal notranslate"><span class="pre">print()</span></code>) 할 때 보여줄 내용을 정의할 수 있습니다.</p></li>
+</ul>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dir() 함수를 통해 문자열 인스턴스가 활용 가능한 메서드를 확인해봅시다.</span>
+
+<span class="nb">dir</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__add__&#39;,
+ &#39;__class__&#39;,
+ &#39;__contains__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getitem__&#39;,
+ &#39;__getnewargs__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__len__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__mod__&#39;,
+ &#39;__mul__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__rmod__&#39;,
+ &#39;__rmul__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;capitalize&#39;,
+ &#39;casefold&#39;,
+ &#39;center&#39;,
+ &#39;count&#39;,
+ &#39;encode&#39;,
+ &#39;endswith&#39;,
+ &#39;expandtabs&#39;,
+ &#39;find&#39;,
+ &#39;format&#39;,
+ &#39;format_map&#39;,
+ &#39;index&#39;,
+ &#39;isalnum&#39;,
+ &#39;isalpha&#39;,
+ &#39;isascii&#39;,
+ &#39;isdecimal&#39;,
+ &#39;isdigit&#39;,
+ &#39;isidentifier&#39;,
+ &#39;islower&#39;,
+ &#39;isnumeric&#39;,
+ &#39;isprintable&#39;,
+ &#39;isspace&#39;,
+ &#39;istitle&#39;,
+ &#39;isupper&#39;,
+ &#39;join&#39;,
+ &#39;ljust&#39;,
+ &#39;lower&#39;,
+ &#39;lstrip&#39;,
+ &#39;maketrans&#39;,
+ &#39;partition&#39;,
+ &#39;removeprefix&#39;,
+ &#39;removesuffix&#39;,
+ &#39;replace&#39;,
+ &#39;rfind&#39;,
+ &#39;rindex&#39;,
+ &#39;rjust&#39;,
+ &#39;rpartition&#39;,
+ &#39;rsplit&#39;,
+ &#39;rstrip&#39;,
+ &#39;split&#39;,
+ &#39;splitlines&#39;,
+ &#39;startswith&#39;,
+ &#39;strip&#39;,
+ &#39;swapcase&#39;,
+ &#39;title&#39;,
+ &#39;translate&#39;,
+ &#39;upper&#39;,
+ &#39;zfill&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스를 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person의 인스턴스 p1을 생성 후 출력해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Person object at 0x000001E400E77DC0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># __str__() 매직메서드는 아래와 같이 정의합니다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># __str__은 기억해두세요.</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;나는 </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;I</span><span class="se">\&#39;</span><span class="s1">m </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 새로운 인스턴스 p2를 생성후 p2를 출력해봅시다.</span>
+
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;jane&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>나는 jane
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I&#39;m jane
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h4>실습<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>매직메서드를 활용하여 인스턴스간의 비교연산(<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>)이 가능하도록 매직메서드를 정의해봅시다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Person</span></code> 클래스를 정의합니다. 인스턴스 속성은 <code class="docutils literal notranslate"><span class="pre">name</span></code> 과 <code class="docutils literal notranslate"><span class="pre">age</span></code>를 가지며, 인스턴스간 <code class="docutils literal notranslate"><span class="pre">age</span></code> 비교가 가능해야합니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__gt__</span></code>메서드와 <code class="docutils literal notranslate"><span class="pre">__eq__</span></code>메서드를 활용합니다.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 실습</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;나는 </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+    <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">age</span>
+    
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">age</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래 코드가 정상 동작하도록 해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span> <span class="o">&gt;</span> <span class="n">p2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="n">p3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">정리</p>
+<ul class="simple">
+<li><p><strong>객체</strong> (Object) : 객체는 자신 고유의 속성(attribute)을 가지며 클래스에서 정의한 행위(behavior) 를 수행</p></li>
+<li><p><strong>클래스</strong> (Class) : 공통된 속성(attribute)과 행위(behavior)를 정의한 것으로 객체지향 프로그램의 기본적인 사용자 정의 데이터형(user-defined data type)</p></li>
+<li><p><strong>인스턴스</strong> (Instance) : 특정 <code class="docutils literal notranslate"><span class="pre">class</span></code>로부터 생성된 해당 클래스의 실체/예시(instance)</p></li>
+<li><p><strong>속성</strong> (Attribute) : 클래스/인스턴스가 가지는 속성(값/데이터)</p></li>
+<li><p><strong>메서드</strong> (Method) :클래스/인스턴스에 적용 가능한 조작법(method) &amp; 클래스/인스턴스가 할 수 있는 행위(함수)</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>7.4 변수, 이름공간, 메서드<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>인스턴스 &amp; 클래스 변수</p></li>
+<li><p>인스턴스 &amp; 클래스간의 이름공간</p></li>
+<li><p>인스턴스 &amp; 클래스 메서드(+ 스태틱 메서드)</p></li>
+</ul>
+<div class="section" id="id15">
+<h3>7.4.1 인스턴스 &amp; 클래스 변수<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h4>인스턴스 변수<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>인스턴스의 속성(attribute)</p></li>
+<li><p>각 인스턴스들의 고유한 변수</p></li>
+<li><p>생성자 메서드에서 <code class="docutils literal notranslate"><span class="pre">self.변수명</span></code>로 정의</p></li>
+<li><p>인스턴스가 생성된 이후 <code class="docutils literal notranslate"><span class="pre">인스턴스.변수명</span></code>로 접근 및 할당</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>    <span class="c1"># 인스턴스 메서드 (생성자) </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>         <span class="c1"># 인스턴스 변수</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위와 같은 Person 클래스를 똑같이 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>    <span class="c1"># 인스턴스 메서드 (생성자) </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span> 
+    
+    <span class="k">def</span> <span class="nf">hi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;hi&#39;</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;아이유&#39;</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">hi</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hi&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스의 인스턴스 me, you를 각각 이름과 함께 생성하고, name 속성을 출력해봅시다.</span>
+
+<span class="n">me</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;연희&#39;</span><span class="p">)</span>
+<span class="n">you</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;지은&#39;</span><span class="p">)</span>
+
+<span class="n">me</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">you</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;연희&#39;, &#39;지은&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h4>클래스 변수<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>클래스의 속성(attribute)</p></li>
+<li><p>모든 인스턴스가 공유</p></li>
+<li><p>클래스 선언 내부에서 정의</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">클래스.변수명</span></code>으로 접근 및 할당</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">Circle</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위의 예시 코드대로 Circle 클래스를 생성해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">Circle</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Circle 클래스의 인스턴스 c1, c2를 생성해봅시다.</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">()</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 클래스 변수 pi에 접근해봅시다.</span>
+
+<span class="n">Circle</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 인스턴스 c1, c2에서 pi 값을 출력해봅시다.</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">c2</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3.14, 3.14)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># c1의 pi 값을 3.141592로 변경하여 봅시다.</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.141592</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># c1, c2에서의 pi값을 각각 출력해봅시다.</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">c2</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3.141592, 3.14)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Circle의 pi를 출력해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Circle</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h4>비교<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>클래스 변수</strong></p>
+<ul>
+<li><p>클래스 정의 안에 (+ 인스턴스 메서드 밖에) 선언</p></li>
+<li><p>특정 클래스 인스턴스에 묶여 있지 않음</p></li>
+<li><p>클래스 자체의 내용을 저장</p></li>
+<li><p>같은 클래스에서 생성된 모든 객체는 동일한 클래스 변수를 공유</p></li>
+</ul>
+</li>
+<li><p><strong>인스턴스 변수</strong></p>
+<ul>
+<li><p>항상 특정 인스턴스에 묶여 있음</p></li>
+<li><p>클래스에 저장되지 않고 클래스에서 생성된 개별 객체에 저장</p></li>
+<li><p>인스턴스 마다 완전히 독립적이므로 변수의 값을 수정하면 오로지 해당 객체에만 영향을 미침</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="id19">
+<h5>클래스 변수와 인스턴스 변수의 함정<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>새 Cat 인스턴스를 만들고 각 인스턴스는 name이라는 인스턴스 변수를 얻음</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>7.4.2 인스턴스 &amp; 클래스간의 이름공간<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id21">
+<h4>이름공간 탐색 순서<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>클래스를 정의하면, 클래스가 생성됨과 동시에 이름 공간(namespace)이 생성됩니다.</p></li>
+<li><p>인스턴스를 만들게 되면, 인스턴스 객체가 생성되고 해당되는 이름 공간이 생성됩니다.</p></li>
+<li><p>인스턴스의 어트리뷰트가 변경되면, 변경된 데이터를 인스턴스 객체 이름 공간에 저장합니다.</p></li>
+<li><p>즉, 인스턴스에서 특정한 어트리뷰트에 접근하게 되면 <strong>인스턴스 =&gt; 클래스</strong> 순으로 탐색을 합니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;unknown&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스의 인스턴스 p1을 생성하고 name을 확인해봅시다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;unknown&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># p1의 name 속성을 직접 변경하고 확인해봅시다.</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Jack&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">#=&gt; 인스턴스의 name</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Person</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">#=&gt; 클래스의 name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jack
+unknown
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>class와 instance는 서로 다른 namespace를 가지고 있습니다.</strong></p></li>
+<li><p><strong>인스턴스에 해당 이름이 없으면 클래스에서 탐색을 합니다.</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;500&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://pythontutor.com/iframe-embed.html#code=class%20Person%3A%0A%20%20%20%20name%20%3D%20&#39;unknown&#39;%0A%0Ap2%20%3D%20Person%28%29%0Aprint%28p2.name%29%0Ap2.name%20%3D%20&#39;Jack&#39;%0Aprint%28p2.name%29%0Aprint%28Person.name%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&quot;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Person%3A%0A%20%20%20%20name%20%3D%20'unknown'%0A%0Ap2%20%3D%20Person%28%29%0Aprint%28p2.name%29%0Ap2.name%20%3D%20'Jack'%0Aprint%28p2.name%29%0Aprint%28Person.name%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h3>7.4.3 메서드의 종류<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="instance-method">
+<h4>인스턴스 메서드 (instance method)<a class="headerlink" href="#instance-method" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>인스턴스가 사용할 메서드</p></li>
+<li><p>클래스 내부에 정의되는 메서드의 기본값은 인스턴스 메서드</p></li>
+<li><p><strong>호출시, 첫번째 인자로 인스턴스 자기자신 <code class="docutils literal notranslate"><span class="pre">self</span></code>가 전달됩니다</strong></p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">instance_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+        <span class="o">...</span>
+
+<span class="n">my_instance</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="c1"># 인스턴스 생성 후 메서드를 호출하면 자동으로 첫 번째 인자로 인스턴스(my_instance)가 들어갑니다.</span>
+<span class="n">my_instance</span><span class="o">.</span><span class="n">instance_method</span><span class="p">(</span><span class="o">..</span><span class="p">,</span> <span class="o">..</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="section" id="class-method">
+<h4>클래스 메서드 (class method)<a class="headerlink" href="#class-method" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>클래스가 사용할 메서드</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code> 데코레이터를 사용하여 정의</p></li>
+<li><p><strong>호출시, 첫 번째 인자로 클래스 <code class="docutils literal notranslate"><span class="pre">cls</span></code>가 전달됩니다</strong></p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">class_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+        <span class="o">...</span>
+
+<span class="c1"># 자동으로 첫 번째 인자로 클래스(MyClass)가 들어갑니다.</span>
+<span class="n">MyClass</span><span class="o">.</span><span class="n">class_method</span><span class="p">(</span><span class="o">..</span><span class="p">,</span> <span class="o">..</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="section" id="static-method">
+<h4>스태틱 메서드 (static method)<a class="headerlink" href="#static-method" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>클래스가 사용할 메서드</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code> 데코레이터를 사용하여 정의</p></li>
+<li><p><strong>호출시, 어떠한 인자도 전달되지 않습니다</strong></p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">static_method</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+        <span class="o">...</span>
+
+<span class="c1"># 아무런 일도 자동으로 일어나지 않습니다.</span>
+<span class="n">MyClass</span><span class="o">.</span><span class="n">static_method</span><span class="p">(</span><span class="o">..</span><span class="p">,</span> <span class="o">..</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MyClass 클래스를 정의해 두었습니다.</span>
+<span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">instance_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">class_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">static_method</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">arg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MyClass 클래스의 인스턴스 mc를 생성해봅시다.</span>
+
+<span class="n">mc</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">instance_method</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyClass at 0x1e400f6d610&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 인스턴스 메서드를 호출하여 반환된 결과(self)와 인스턴스(mc)를 비교해봅시다.</span>
+<span class="c1"># 1. id를 출력해 보고, 같은 id인지 확인</span>
+<span class="c1"># 2. == 연산자를 확인해 비교</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">instance_method</span><span class="p">()),</span> <span class="nb">id</span><span class="p">(</span><span class="n">mc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">instance_method</span><span class="p">()</span> <span class="o">==</span> <span class="n">mc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2078780347920 2078780347920
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 클래스 메서드를 호출하여 반환된 결과(cls)와 인스턴스(mc)를 비교해봅시다.</span>
+<span class="c1"># 1. id를 출력해 보고, 같은 id인지 확인</span>
+<span class="c1"># 2. == 연산자를 확인해 비교</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">class_method</span><span class="p">()),</span> <span class="nb">id</span><span class="p">(</span><span class="n">MyClass</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">class_method</span><span class="p">()</span> <span class="o">==</span> <span class="n">MyClass</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2078768354784 2078768354784
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 스태틱 메서드를 호출하고 반환된 결과(arg)를 확인해봅시다.</span>
+<span class="c1"># 어떠한 인자도 전달되는 것이 없습니다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">static_method</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h3>7.4.4 비교 정리<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id24">
+<h4>인스턴스와 메서드<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>인스턴스는 3가지 메서드 모두에 접근할 수 있습니다.</p></li>
+<li><p>하지만, 인스턴스가 할 행동은 모두 인스턴스 메서드로 한정 지어서 설계합니다.</p></li>
+<li><p>인스턴스에서 클래스 메서드와 스태틱 메서드는 되도록 호출하지 않아야 합니다. (가능하다 != 사용한다)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위의 MyClass를 활용하여 클래스 입장에서 확인해봅시다.</span>
+<span class="c1"># 클래스 메서드를 호출해봅시다.</span>
+
+<span class="n">MyClass</span><span class="o">.</span><span class="n">class_method</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>__main__.MyClass
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 스태틱 메서드를 호출해봅시다.</span>
+
+<span class="n">MyClass</span><span class="o">.</span><span class="n">static_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 클래스로 인스턴스 메서드를 호출해봅시다.</span>
+<span class="c1"># MyClass.instance_method(mc)는 mc.instance_method()와 같습니다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">instance_method</span><span class="p">())</span>  <span class="c1"># Error =&gt; 첫 번째 인자인 인스턴스 객체가 없습니다.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_9912</span><span class="o">/</span><span class="mf">3496252957.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># MyClass.instance_method(mc)는 mc.instance_method()와 같습니다.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">instance_method</span><span class="p">())</span>  <span class="c1"># Error =&gt; 첫 번째 인자인 인스턴스 객체가 없습니다.</span>
+
+<span class="ne">TypeError</span>: instance_method() missing 1 required positional argument: &#39;self&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">instance_method</span><span class="p">(</span><span class="n">mc</span><span class="p">))</span>  <span class="c1"># mc.instance_method()와 같습니다.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyClass object at 0x000001E400F6D610&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id25">
+<h4>클래스와 메서드<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>클래스가 할 행동은 다음 원칙에 따라 설계합니다. (클래스 메서드와 정적 메서드)</p>
+<ul>
+<li><p>클래스 자체(<code class="docutils literal notranslate"><span class="pre">cls</span></code>)와 그 속성에 접근할 필요가 있다면 <strong>클래스 메서드</strong>로 정의합니다.</p></li>
+<li><p>클래스와 클래스 속성에 접근할 필요가 없다면 <strong>정적 메서드</strong>로 정의합니다.</p>
+<ul>
+<li><p>정적 메서드는 <code class="docutils literal notranslate"><span class="pre">cls</span></code>, <code class="docutils literal notranslate"><span class="pre">self</span></code>와 같이 묵시적인 첫번째 인자를 받지 않기 때문</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="puppy">
+<h4>[코드예시] Puppy<a class="headerlink" href="#puppy" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Puppy 클래스의 속성에 접근하는 클래스 메서드를 생성해 봅시다.</p></li>
+<li><p>클래스 변수 <code class="docutils literal notranslate"><span class="pre">population</span></code>를 통해 강아지가 생길 때마다 증가 시키도록 하겠습니다.</p></li>
+<li><p>강아지들은 각자의 이름(<code class="docutils literal notranslate"><span class="pre">name</span></code>)과 종(<code class="docutils literal notranslate"><span class="pre">breed</span></code>)을 갖고 있습니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bark()</span></code> 메서드를 호출하면 짖을 수 있습니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Puppy</span><span class="p">:</span>
+    <span class="n">population</span> <span class="o">=</span> <span class="mi">0</span>                        <span class="c1"># class 변수</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>      <span class="c1"># 생성자 함수 (constructor)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>                  <span class="c1"># instance 변수 초기화</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+        
+        <span class="n">Puppy</span><span class="o">.</span><span class="n">population</span> <span class="o">+=</span> <span class="mi">1</span>             <span class="c1"># class 변수 값 변경</span>
+    
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>                    <span class="c1"># 소멸자</span>
+        <span class="n">Puppy</span><span class="o">.</span><span class="n">population</span> <span class="o">-=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>                       <span class="c1"># 인스턴스 메서드</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;왈왈! 나는 </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">breed</span><span class="si">}</span><span class="s1">야&#39;</span><span class="p">)</span>  <span class="c1"># 인스턴스 변수에 접근</span>
+    
+    <span class="nd">@classmethod</span>                          <span class="c1"># 클래스 메서드</span>
+    <span class="k">def</span> <span class="nf">get_population</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;현재 강아지 마리수: </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">population</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># 클래스 변수에 접근</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">population</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Puppy 클래스의 인스턴스 p1, p2, p3를 생성해봅시다.</span>
+<span class="c1"># name과 breed는 자유롭게 설정합니다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Puppy</span><span class="p">(</span><span class="s1">&#39;봄이&#39;</span><span class="p">,</span> <span class="s1">&#39;사모예드&#39;</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Puppy</span><span class="p">(</span><span class="s1">&#39;코코&#39;</span><span class="p">,</span> <span class="s1">&#39;폼피츠&#39;</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">Puppy</span><span class="p">(</span><span class="s1">&#39;스노이&#39;</span><span class="p">,</span> <span class="s1">&#39;말티즈&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 각 인스턴스마다 bark 메서드를 실행해봅시다.</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+<span class="n">p2</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+<span class="n">p3</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>왈왈! 나는 봄이, 사모예드야
+왈왈! 나는 코코, 폼피츠야
+왈왈! 나는 스노이, 말티즈야
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 클래스 메서드 get_population을 호출해봅시다.</span>
+
+<span class="n">Puppy</span><span class="o">.</span><span class="n">get_population</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>현재 강아지 마리수: 3
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위의 Puppy 클래스를 처음부터 정의해봅시다.</span>
+<span class="c1"># 추가로 스태틱 메서드 info를 정의하고 호출해봅시다.</span>
+<span class="c1"># info 메서드는 &#39;이것은 Puppy 클래스입니다!&#39; 라는 문자열을 return 합니다.</span>
+
+<span class="k">class</span> <span class="nc">Puppy</span><span class="p">:</span>
+    <span class="n">population</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+        <span class="n">Puppy</span><span class="o">.</span><span class="n">population</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Puppy</span><span class="o">.</span><span class="n">population</span> <span class="o">-=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;왈왈! 나는 </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">breed</span><span class="si">}</span><span class="s1">(이)야&#39;</span><span class="p">)</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_population</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;현재 강아지 마리수: </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">population</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">population</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">info</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;이것은 Puppy 클래스입니다!&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">Puppy</span><span class="p">(</span><span class="s1">&#39;초코&#39;</span><span class="p">,</span> <span class="s1">&#39;푸들&#39;</span><span class="p">)</span>
+
+<span class="c1"># instance method</span>
+<span class="n">d</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+
+<span class="c1"># static method</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">info</span><span class="p">(),</span> <span class="n">Puppy</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+
+<span class="c1"># class method</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Puppy</span><span class="o">.</span><span class="n">get_population</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>왈왈! 나는 초코, 푸들(이)야
+이것은 Puppy 클래스입니다! 이것은 Puppy 클래스입니다!
+현재 강아지 마리수: 1
+1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>7.5 상속<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">상속 (Inheritance)</p>
+<ul class="simple">
+<li><p>상속(Inheritance)</p></li>
+<li><p>메서드 오버라이딩(Method Overriding)</p></li>
+<li><p>다중 상속(Multiple Inheritance)</p></li>
+</ul>
+</div>
+<div class="section" id="inheritance">
+<h3>7.5.1 상속 (Inheritance) 이란?<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
+<p>클래스에서 가장 큰 특징은 <code class="docutils literal notranslate"><span class="pre">상속</span></code>이 가능하다는 것입니다.</p>
+<p>부모 클래스의 모든 속성이 자식 클래스에게 상속 되므로 코드 재사용성이 높아집니다.</p>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ChildClass</span><span class="p">(</span><span class="n">ParentClass</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">code</span> <span class="n">block</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스를 정의해 보겠습니다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">population</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;사람&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">Person</span><span class="o">.</span><span class="n">population</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;반갑습니다. </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스의 인스턴스 p1을 생성해봅시다.</span>
+<span class="c1"># name 속성은 자유롭게 설정합니다.</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;아이유&#39;</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Person</span><span class="o">.</span><span class="n">population</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>반갑습니다. 아이유입니다.
+1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스를 상속받아 Student 클래스를 만들어 보겠습니다.</span>
+
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">student_id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;학생&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">student_id</span> <span class="o">=</span> <span class="n">student_id</span>  
+        <span class="n">Person</span><span class="o">.</span><span class="n">population</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Student 클래스의 객체 s1을 만들어봅시다.</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span> <span class="s1">&#39;배수지&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># s1의 name과 student_id를 확인해봅시다.</span>
+
+<span class="n">s1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">s1</span><span class="o">.</span><span class="n">student_id</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;배수지&#39;, 1001)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 자식 클래스의 인스턴스는 부모 클래스에 정의된 메서드를 호출 할 수 있습니다.</span>
+<span class="c1"># talk 메서드를 호출해봅시다.</span>
+
+<span class="n">s1</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>반갑습니다. 배수지입니다.
+</pre></div>
+</div>
+</div>
+</div>
+<p>이처럼 상속은 공통된 속성이나 메서드를 부모 클래스에 정의하고, 이를 상속받아 다양한 형태의 사람들을 만들 수 있습니다.</p>
+<div class="section" id="issubclass-class-classinfo">
+<h4><code class="docutils literal notranslate"><span class="pre">issubclass(class,</span> <span class="pre">classinfo)</span></code><a class="headerlink" href="#issubclass-class-classinfo" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>class가 classinfo의 subclass면 True</p></li>
+</ul>
+</div>
+<div class="section" id="isinstance-object-classinfo">
+<h4><code class="docutils literal notranslate"><span class="pre">isinstance(object,</span> <span class="pre">classinfo)</span></code><a class="headerlink" href="#isinstance-object-classinfo" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>object가 classinfo의 인스턴스거나 subclass인 경우 True</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># issubclass 함수를 통해 Student 클래스와 Person 클래스가 상속관계인지 확인해봅시다. (클래스 상속 검사)</span>
+<span class="c1"># issubclass(자식클래스, 부모클래스)</span>
+
+<span class="nb">issubclass</span><span class="p">(</span><span class="n">Student</span><span class="p">,</span> <span class="n">Person</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># isinstance 함수를 통해</span>
+<span class="c1"># s1이 Student 클래스의 인스턴스인지,</span>
+<span class="c1"># s1이 Person 클래스의 인스턴스인지 모두 확인해봅시다.</span>
+<span class="c1"># isinstance(인스턴스, 클래스)</span>
+
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">Student</span><span class="p">),</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">Person</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(True, True)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 내장 자료형들도 아래와 같이 상속 관계가 있습니다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">issubclass</span><span class="p">(</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span> <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">issubclass</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span> <span class="c1"># False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="super">
+<h4><code class="docutils literal notranslate"><span class="pre">super()</span></code><a class="headerlink" href="#super" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>자식 클래스에 메서드를 추가로 구현할 수 있습니다.</p></li>
+<li><p>부모 클래스의 내용을 사용하고자 할 때, <code class="docutils literal notranslate"><span class="pre">super()</span></code>를 사용할 수 있습니다.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>활용법</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ChildClass</span><span class="p">(</span><span class="n">ParentClass</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> 
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스와 Student 클래스를 함께 정의해 보겠습니다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span> 
+        
+    <span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;안녕, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+      
+    
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">student_id</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">student_id</span> <span class="o">=</span> <span class="n">student_id</span>
+        
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;홍교수&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;0101231234&#39;</span><span class="p">,</span> <span class="s1">&#39;hong@gildong&#39;</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;학생&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;12312312&#39;</span><span class="p">,</span> <span class="s1">&#39;student@naver.com&#39;</span><span class="p">,</span> <span class="s1">&#39;190000&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># p1과 s1 모두 greeting 메서드를 호출해봅시다.</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">greeting</span><span class="p">()</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">greeting</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안녕, 홍교수
+안녕, 학생
+</pre></div>
+</div>
+</div>
+</div>
+<p>위의 코드는 상속을 했음에도 불구하고 초기화(<code class="docutils literal notranslate"><span class="pre">__init__</span></code>)에서 동일한 코드가 반복됩니다.</p>
+<p>초기화의 중복을 <code class="docutils literal notranslate"><span class="pre">super()</span></code> 함수를 통해 제거해봅시다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span> 
+        
+    <span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;안녕, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+        
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">student_id</span><span class="p">):</span>
+        <span class="c1"># Person 클래스</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">student_id</span> <span class="o">=</span> <span class="n">student_id</span>
+        
+        
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;홍교수&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;0101231234&#39;</span><span class="p">,</span> <span class="s1">&#39;hong@gildong&#39;</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;학생&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;12312312&#39;</span><span class="p">,</span> <span class="s1">&#39;student@naver.com&#39;</span><span class="p">,</span> <span class="s1">&#39;190000&#39;</span><span class="p">)</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">greeting</span><span class="p">()</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">greeting</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안녕, 홍교수
+안녕, 학생
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rectangle-square">
+<h4>[실습] Rectangle &amp; Square<a class="headerlink" href="#rectangle-square" title="Permalink to this headline">¶</a></h4>
+<p>아래의 조건에 만족하는 클래스 <code class="docutils literal notranslate"><span class="pre">Rentangle</span></code> 을 작성하세요.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Rectangle 클래스는 아래와 같은 속성과 메서드를 갖습니다.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>인스턴스 속성</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> : 가로 길이</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">height</span></code> : 세로 길이</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>인스턴스 메서드</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">area</span></code>: 직사각형의 넓이를 리턴</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perimeter</span></code>: 직사각형의 둘레의 길이를 리턴</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rectangle 클래스를 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+    
+    <span class="nd">@property</span>      <span class="c1"># 추가적인 인자가 없는 method에만 property를 달 수 있습니다.</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rectangle 클래스의 인스턴스 rectangle을 가로 길이 4, 세로 길이 8로 초기화하고</span>
+<span class="c1"># area 메서드와 perimeter 메서드를 통해 넓이와 둘레를 구해봅시다.</span>
+
+<span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">rectangle</span><span class="o">.</span><span class="n">area</span><span class="p">(),</span> <span class="n">rectangle</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(32, 24)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Rectangle 클래스를 상속받아 Sqaure 클래스를 만들어 주세요.</p>
+<ul>
+<li><p>Square 클래스는 Rectangle 클래스에서 상속받은 속성 외 추가 속성을 가지고 있지 않습니다.</p></li>
+<li><p>단, 정사각형이므로 인스턴스 생성시 인자로 한 변의 길이만 받습니다.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Square 클래스를 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Square</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Square 클래스의 인스턴스 square를 길이 4로 초기화하고</span>
+<span class="c1"># area 메서드와 perimeter 메서드를 통해 넓이와 둘레를 구해봅시다.</span>
+
+<span class="n">square</span> <span class="o">=</span> <span class="n">Square</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">square</span><span class="o">.</span><span class="n">area</span><span class="p">(),</span> <span class="n">square</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(16, 16)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id27">
+<h3>7.5.2 메서드 오버라이딩<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Method Overriding(메서드 오버라이딩): 자식 클래스에서 부모 클래스의 메서드를 재정의하는 것</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>상속 받은 메서드를 <code class="docutils literal notranslate"><span class="pre">재정의</span></code>할 수도 있습니다.</p></li>
+<li><p>상속 받은 클래스에서 <strong>같은 이름의 메서드</strong>로 덮어씁니다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span> 
+        
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;안녕, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 위의 Person 클래스를 상속 받아 군인답게 말하는 Soldier 클래스를 만들어 보겠습니다.</span>
+<span class="c1"># talk 메서드를 재정의(override) 하겠습니다.</span>
+
+<span class="k">class</span> <span class="nc">Soldier</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">army</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">army</span> <span class="o">=</span> <span class="n">army</span>
+        
+    <span class="c1"># method overriding    </span>
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;충성! </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">army</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;일반인&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;010123&#39;</span><span class="p">,</span> <span class="s1">&#39;1banin@gmail.com&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>안녕, 일반인
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">Soldier</span><span class="p">(</span><span class="s1">&#39;굳건이&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;0101234&#39;</span><span class="p">,</span> <span class="s1">&#39;soldier@roka.kr&#39;</span><span class="p">,</span> <span class="s1">&#39;하사&#39;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>충성! 하사 굳건이
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id28">
+<h3>7.5.3 상속관계에서의 이름공간<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>기존의 <code class="docutils literal notranslate"><span class="pre">인스턴스</span> <span class="pre">-&gt;</span> <span class="pre">클래스</span></code> 순으로 이름 공간을 탐색해나가는 과정에서 상속관계에 있으면 아래와 같이 확장됩니다.</p>
+<ul>
+<li><p>인스턴스 -&gt; 자식 클래스 -&gt; 부모 클래스</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="person-animal">
+<h4>[연습] Person &amp; Animal (메서드 오버라이딩)<a class="headerlink" href="#person-animal" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>사실 사람은 포유류입니다.</p>
+<p>Animal Class를 만들고, Person Class 가 상속받도록 구성해봅시다.</p>
+<p>(변수나, 메서드는 자유롭게 만들어보세요.)</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">예시</span><span class="p">)</span> 
+<span class="n">모든</span> <span class="n">동물은</span> <span class="n">이름이</span> <span class="n">있고</span><span class="p">,</span> <span class="n">사람은</span> <span class="n">이름과</span> <span class="n">이메일이</span> <span class="n">있습니다</span><span class="o">.</span>
+<span class="n">모든</span> <span class="n">동물은</span> <span class="n">talk</span> <span class="n">메서드가</span> <span class="n">있습니다</span><span class="o">.</span> 
+<span class="n">동물은</span> <span class="s1">&#39;으르렁&#39;</span><span class="n">하고</span><span class="p">,</span> <span class="n">사람은</span> <span class="s1">&#39;안녕&#39;</span><span class="n">합니다</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 아래에 코드를 작성해주세요.</span>
+
+<span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;grr&#39;</span><span class="p">)</span>
+            
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+    
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;안녕&#39;</span><span class="p">)</span>
+            
+
+<span class="n">animal</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="s1">&#39;곰&#39;</span><span class="p">)</span>
+<span class="n">animal</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+
+<span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;김싸피&#39;</span><span class="p">,</span> <span class="s1">&#39;hello@ssafy.com&#39;</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grr
+안녕
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id29">
+<h3>7.5.4 다중 상속<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>두개 이상의 클래스를 상속받는 경우, 다중 상속이 됩니다.</p>
+<ul>
+<li><p>상속 받은 모든 클래스의 요소를 활용 가능</p></li>
+<li><p>중복된 속성이나 메서드가 있는 경우 상속 순서에 의해 결정</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Person 클래스를 정의합니다.</span>
+<span class="c1"># Person 클래스는 생성자에서 인스턴스 변수로 name을 설정합니다.</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;안녕, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mom 클래스를 정의합니다.</span>
+<span class="c1"># Mom 클래스는 Person 클래스를 상속받으며, 클래스 변수로 gene을 갖습니다. 값은 &#39;XX&#39;입니다.</span>
+<span class="c1"># Dad 클래스만의 인스턴스 메서드 swim을 자유롭게 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Mom</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="n">gene</span> <span class="o">=</span> <span class="s1">&#39;XX&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;첨벙첨벙&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dad 클래스를 정의합니다.</span>
+<span class="c1"># Dad 클래스는 Person 클래스를 상속받으며, 클래스 변수로 gene을 갖습니다. 값은 &#39;XY&#39;입니다.</span>
+<span class="c1"># Dad 클래스만의 인스턴스 메서드 walk를 자유롭게 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">Dad</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="n">gene</span> <span class="o">=</span> <span class="s1">&#39;XY&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;성큼성큼&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># FirstChild 클래스를 정의합니다. </span>
+<span class="c1"># 상속의 순서가 중요합니다.(Dad, Mom) 순서로 상속받아봅시다.</span>
+<span class="c1"># 상속받은 swim 메서드를 재정의(override)해봅시다.</span>
+<span class="c1"># FirstChild 클래스만의 인스턴스 메서드 cry를 자유롭게 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">FirstChild</span><span class="p">(</span><span class="n">Dad</span><span class="p">,</span> <span class="n">Mom</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Mom의 swim 메서드를 오버라이딩 합니다.</span>
+        <span class="k">return</span> <span class="s1">&#39;챱챱&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">cry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Child 만이 가지는 인스턴스 메서드 입니다.</span>
+        <span class="k">return</span> <span class="s1">&#39;응애&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># FirstChild 클래스의 인스턴스 baby1을 생성해봅시다.</span>
+
+<span class="n">baby1</span> <span class="o">=</span> <span class="n">FirstChild</span><span class="p">(</span><span class="s1">&#39;첫째&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby1의 cry 메서드를 실행해봅시다.</span>
+
+<span class="n">baby1</span><span class="o">.</span><span class="n">cry</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;응애&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby1의 swim 메서드를 실행해봅시다.</span>
+
+<span class="n">baby1</span><span class="o">.</span><span class="n">swim</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;챱챱&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby1의 walk 메서드를 실행해봅시다.</span>
+
+<span class="n">baby1</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;성큼성큼&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby1의 gene 속성은 어떤 부모클래스의 속성값을 상속받는지 확인해봅시다.</span>
+
+<span class="n">baby1</span><span class="o">.</span><span class="n">gene</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;XY&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 이번에는 SecondChild 클래스를 만들어 상속 순서를 바꿔봅시다.</span>
+<span class="c1"># (Mom, Dad) 순서로 상속받아봅시다.</span>
+<span class="c1"># 상속받은 walk 메서드를 재정의(override)해봅시다.</span>
+<span class="c1"># SecondChild 클래스만의 인스턴스 메서드 cry를 자유롭게 정의해봅시다.</span>
+
+<span class="k">class</span> <span class="nc">SecondChild</span><span class="p">(</span><span class="n">Mom</span><span class="p">,</span> <span class="n">Dad</span><span class="p">):</span>  
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Dad 의 walk 메서드를 오버라이딩 합니다.</span>
+        <span class="k">return</span> <span class="s1">&#39;아장아장&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">cry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+        <span class="k">return</span> <span class="s1">&#39;응애&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SecondChild의 인스턴스 baby2를 생성합니다.</span>
+
+<span class="n">baby2</span> <span class="o">=</span> <span class="n">SecondChild</span><span class="p">(</span><span class="s1">&#39;둘째&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby2의 cry 메서드를 실행합니다.</span>
+
+<span class="n">baby2</span><span class="o">.</span><span class="n">cry</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;응애&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby2의 walk 메서드를 실행합니다.</span>
+
+<span class="n">baby2</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;아장아장&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby2의 swim 메서드를 실행합니다.</span>
+
+<span class="n">baby2</span><span class="o">.</span><span class="n">swim</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;첨벙첨벙&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># baby2의 gene 속성은 어떤 부모클래스의 속성값을 상속받는지 확인해봅시다.</span>
+
+<span class="n">baby2</span><span class="o">.</span><span class="n">gene</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;XX&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="06_module.html" title="previous page">06. 모듈</a>
+    <a class='right-next' id="next-link" href="practice9%28OOP1%29.html" title="next page">Practice 9 : OOP</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hing9u<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>00. Python 기초 &#8212; Hing9u&#39;s Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="변수와 식별자" href="00_01.html" />
+    <link rel="prev" title="개요" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Hing9u's Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   개요
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  PYTHON
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   00. Python 기초
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_01.html">
+     변수와 식별자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_02.html">
+     데이터 타입
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_03.html">
+     연산자
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_04.html">
+     [참고] 표현식 &amp; 문장
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_05.html">
+     [정리] 변수와 자료형
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_data_container.html">
+   01. 컨테이너
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="02_00.html">
+   02. 제어문
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_01.html">
+     2.1 조건문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_02.html">
+     2.2 반복문
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice1%28intro%2C%20container%29.html">
+     Practice 1 : 데이터 &amp; 제어문
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="03_function.html">
+   03. 함수
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice2%28function1%29.html">
+     Practice 2 : 함수 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice3%28function2%29.html">
+     Practice 3 : 함수 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice4%28function3%29.html">
+     Practice 4 : 함수 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_error_exception.html">
+   04. 에러 &amp; 예외 처리
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="05_data_structure.html">
+   05. 데이터 구조
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice5%28ds1%29.html">
+     Practice 5 : 자료 구조
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice6%28ds2%29.html">
+     Practice 6 : 자료 구조
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice7%28ds3%29.html">
+     Practice 7 : 자료 구조
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice8%28ds4%29.html">
+     Practice 8 : 자료 구조
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_module.html">
+   06. 모듈
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="07_OOP.html">
+   07. 객체지향 프로그래밍
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice9%28OOP1%29.html">
+     Practice 9 : OOP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice10%28OOP2%29.html">
+     Practice 10 : OOP
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  ALGORITHMS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_algorithm.html">
+   01. 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_array.html">
+   01. 배열과 알고리즘 기본
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_string.html">
+   02. 문자열 (string)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_stack.html">
+   03. 스택 (stack)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/00_00.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/00_00.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/00_00.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Python 개발 환경
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   기초 문법 (Syntax)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   주석
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comment">
+     주석 (Comment)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   코드 라인
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="python">
+<h1>00. Python 기초<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Python 특징</p>
+<ul class="simple">
+<li><p><strong>인터프리터 언어</strong>(Interpreter)</p>
+<ul>
+<li><p>소스 코드를 컴파일하지 않고, 한 줄씩 소스코드를 읽어서 바로 실행</p></li>
+<li><p>컴파일 언어에 비해 느릴 수 있지만 빌드 과정이 없이 바로 실행 가능함.</p></li>
+</ul>
+</li>
+<li><p><strong>객체 지향 프로그래밍</strong>(Object Oriented Programming)</p>
+<ul>
+<li><p>파이썬은 모두 객체로 이뤄져 있음.</p></li>
+</ul>
+</li>
+<li><p><strong>동적 타이핑</strong>(Dynamic Typing)</p>
+<ul>
+<li><p>변수에 별도의 타입 지정이 필요 없음.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Python 개발 환경<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>대화형 환경</strong></p>
+<ul>
+<li><p>Python 기본 Interpreter</p></li>
+<li><p>Python Jupyter Notebook</p></li>
+</ul>
+</li>
+<li><p><strong>스크립트 실행</strong></p>
+<ul>
+<li><p>.py 파일을 작성하고 IDE 혹은 Text editor 활용</p></li>
+</ul>
+</li>
+<li><p><strong>Python Interpreter / IDLE</strong></p>
+<ul>
+<li><p>인터프리터가 대화형 모드로 동작함</p>
+<ul>
+<li><p>프롬포트(<code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>)에 코드를 작성하면 해당 코드가 실행됨.</p></li>
+<li><p>여러 줄의 코드가 작성되는 경우 보조 프롬포트(<code class="docutils literal notranslate"><span class="pre">...</span></code>)가 사용됨.</p></li>
+</ul>
+</li>
+<li><p>Python이 설치된 환경에서는 기본적으로 활용 가능하나 디버깅 및 코드 편집, 반복 실행이 어려움.</p></li>
+</ul>
+</li>
+<li><p><strong>Python Jupyter Lab</strong></p>
+<ul>
+<li><p>웹 브라우저 환경에서 코드를 작성할 수 있는 오픈소스</p>
+<ul>
+<li><p>Syntax Highlighting, Indentation, Tab completion 등 편의기능 제공함.</p></li>
+<li><p>브라우저에서 코드를 실행하고 결과를 확인할 수 있음</p></li>
+<li><p>HTML, LaTex, PNG, SVG을 바탕으로 다양한 표현이 가능함.</p></li>
+<li><p>Markdown을 기반으로 문서를 작성할 수 있음.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="syntax">
+<h2>기초 문법 (Syntax)<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">코드 스타일 가이드</p>
+<p>코드를 ‘<strong>어떻게 작성할지</strong>’에 대한 가이드라인</p>
+<ul class="simple">
+<li><p>PEP8 (<a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a>) - 파이썬에서 제안하는 스타일 가이드</p></li>
+<li><p>Google Style guide (<a class="reference external" href="https://google.github.io/styleguide/pyguide.html">https://google.github.io/styleguide/pyguide.html</a>) 등 기업, 오픈소스 등에서 사용되는 스타일 가이드</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>주석<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="comment">
+<h3>주석 (Comment)<a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h3>
+<p><strong>한 줄 주석</strong>은 <code class="docutils literal notranslate"><span class="pre">#</span></code>으로 표현합니다.</p>
+<p><strong>여러 줄의 주석</strong>은</p>
+<ol class="simple">
+<li><p>한 줄 씩 <code class="docutils literal notranslate"><span class="pre">#</span></code>을 사용해서 표현하거나,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> 또는 <code class="docutils literal notranslate"><span class="pre">'''</span></code> (여러줄 문자열, multiline string)으로 표현할 수 있습니다.
+(multiline은 주로 함수/클래스를 설명 (docstring)하기 위해 활용됩니다.)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 한줄 주석</span>
+    
+<span class="c1"># print(&#39;hello&#39;) # 이 줄은 실행되지 않습니다.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>world
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 여러줄 주석 (multiline string)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">이것은</span>
+<span class="sd">여러줄에 걸친</span>
+<span class="sd">주석을 만드는 코드입니다.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>world
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;이 함수는 foo입니다.</span>
+<span class="sd">    docstring으로 함수나 클래스의 기능을 설명합니다.&#39;&#39;&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>이 함수는 foo입니다.
+    docstring으로 함수나 클래스의 기능을 설명합니다.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>코드 라인<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>파이썬 코드는 ‘<strong>1줄에 1문장</strong>(statment)’이 원칙입니다.</p>
+<p><strong>문장</strong>(statement)은 파이썬이 <strong>실행 가능</strong>(executable)한 최소한의 코드 단위입니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>기본적으로 파이썬에서는 <code class="docutils literal notranslate"><span class="pre">;</span></code>을 작성하지 않습니다.</p></li>
+<li><p>한 줄로 표기할때는 <code class="docutils literal notranslate"><span class="pre">;</span></code>을 작성하여 표기할 수 있습니다.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문을 두 번 쓸 경우</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+world
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문 2개를 한 줄로 이어서 작성할 경우</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_28272/2492589894.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ;을 통해 코드를 구분시켜 오류 해결</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+
+<span class="c1"># 하지만 위와 같이 한줄에 두 개 이상의 코드를 작성하는 작성법은 잘 쓰지 않습니다.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+world
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>줄을 여러줄 작성할 때</strong>는 역슬래시<code class="docutils literal notranslate"><span class="pre">\</span></code>를 사용하여 아래와 같이 할 수 있다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문을 통해 하나의 문자열을 두 줄로 작성하여 실행해봅시다. </span>
+<span class="c1"># 아래의 코드를 실행시켜 오류 메시지를 확인해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello</span>
+<span class="n">world</span><span class="s1">&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\User\AppData\Local\Temp/ipykernel_28272/2393845461.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello</span>
+                <span class="o">^</span>
+<span class="ne">SyntaxError</span>: EOL while scanning string literal
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print문을 통해 실행되는 코드 예시 작성해봅시다.</span>
+<span class="c1"># hello 뒤에 \를 붙이고 다시 코드를 실행해봅시다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello</span><span class="se">\</span>
+<span class="s1">world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>helloworld
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># PEP-8 가이드에 따르면 여러줄 문자열은 아래와 같이 쓰는 게 관례(convention)입니다.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;hello</span>
+<span class="s2">world&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+world
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">[]</span></code> <code class="docutils literal notranslate"><span class="pre">{}</span></code> <code class="docutils literal notranslate"><span class="pre">()</span></code>는 <code class="docutils literal notranslate"><span class="pre">\</span></code> 없이도 가능합니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 대괄호를 사용한 list를 만들어봅시다.</span>
+<span class="c1"># list 대괄호 안에는 &#39;짜장면&#39;, &#39;짬뽕&#39;, &#39;탕수육&#39;,&#39;군만두&#39;, &#39;물만두&#39;, &#39;왕만두&#39;를 두 줄로 채워넣어 봅시다.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 닫히는 대괄호의 위치 </span>
+<span class="c1"># (1). 첫번째 요소(짜장면)의 시작 위치</span>
+<span class="n">lunch1</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;짜장면&#39;</span><span class="p">,</span> <span class="s1">&#39;짬뽕&#39;</span><span class="p">,</span> <span class="s1">&#39;탕수육&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;군만두&#39;</span><span class="p">,</span> <span class="s1">&#39;물만두&#39;</span><span class="p">,</span> <span class="s1">&#39;왕만두&#39;</span><span class="p">,</span>
+    <span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># (2) 생성자(lunch2)가 시작되는 위치</span>
+<span class="n">lunch2</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;짜장면&#39;</span><span class="p">,</span> <span class="s1">&#39;짬뽕&#39;</span><span class="p">,</span> <span class="s1">&#39;탕수육&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;군만두&#39;</span><span class="p">,</span> <span class="s1">&#39;물만두&#39;</span><span class="p">,</span> <span class="s1">&#39;왕만두&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PEP-8 가이드에 따르면, list 가 여러 줄로 작성될 때 닫히는 대괄호의 위치는</p>
+<ol class="simple">
+<li><p>첫번째 문자(요소) 위치에 오거나</p></li>
+<li><p>마지막 줄에서 생성자가 시작되는 첫번째 열에 위치합니다.</p></li>
+</ol>
+<p>다른 (소, 중)괄호도 동일한 컨벤션을 따릅니다.</p>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">개요</a>
+    <a class='right-next' id="next-link" href="00_01.html" title="next page">변수와 식별자</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hing9u<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
