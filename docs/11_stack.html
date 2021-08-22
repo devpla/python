@@ -454,18 +454,16 @@
     <a class="reference internal nav-link" href="#id15">
      재귀 호출
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#factorial">
-       Factorial
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id16">
-       피보나치 수열
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#factorial">
+     Factorial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     피보나치 수열
+    </a>
    </li>
   </ul>
  </li>
@@ -527,6 +525,23 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id23">
+   3.6 계산기
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step1-1">
+     step1. 중위표기식의 후위표기식 변환 방법 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step1">
+     step1. 중위 표기법에서 후위 표기법으로의 변환 알고리즘 (스택 이용)
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -558,34 +573,38 @@
 <li><p>물건을 쌓아 올리듯 자료를 쌓아 올린 형태의 자료구조이다.</p></li>
 <li><p>스택에 저장된 자료는 선형 구조를 갖는다.</p>
 <ul>
-<li><p>선형 구조 : 자료 간의 관계가 1대 1의 관계를 갖는다.</p></li>
-<li><p>비선형구조 : 자료 간의 관계가 1대 N의 관계를 갖는다. (ex. 트리)</p></li>
+<li><p><strong>선형 구조</strong> : 자료 간의 관계가 1대 1의 관계를 갖는다.</p></li>
+<li><p><strong>비선형구조</strong> : 자료 간의 관계가 1대 N의 관계를 갖는다. (ex. 트리)</p></li>
 </ul>
 </li>
+</ul>
+<br>
+<ul class="simple">
 <li><p>스택에 자료를 삽입하거나 스택에서 자료를 꺼낼 수 있다.</p></li>
-<li><p>마지막에 삽입한 자료를 가장 먼저 꺼낸다. 후입선출(LIFO, Last-in-First-Out) 이라고 부른다.</p>
+<li><p>마지막에 삽입한 자료를 가장 먼저 꺼낸다. <strong>후입선출</strong>(LIFO, Last-in-First-Out) 이라고 부른다.</p>
 <ul>
 <li><p>예를 들어 스택에 1, 2, 3 순으로 자료를 삽입한 후 꺼내면 역순으로 즉 3, 2, 1 순으로 꺼낼 수 있다.</p></li>
 </ul>
 </li>
 </ul>
+<br>
 </div>
 <div class="section" id="id3">
 <h3>스택의 구현<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id4">
 <h4>스택을 프로그램에서 구현하기 위해서 필요한 자료구조와 연산<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>자료구조 : 자료를 선형으로 저장할 저장소</p>
+<li><p><strong>자료구조</strong> : 자료를 선형으로 저장할 저장소</p>
 <ul>
 <li><p>C언어에서는 배열을 사용할 수 있다.</p></li>
 <li><p>저장소 자체를 스택이라 부르기도 한다.</p></li>
 <li><p>스택에서 마지막 삽입된 원소의 위치를 top이라 부른다.</p></li>
 </ul>
 </li>
-<li><p>연산</p>
+<li><p><strong>연산</strong></p>
 <ul>
-<li><p>삽입 : 저장소에 자료를 저장한다. 보통 push라고 부른다.</p></li>
-<li><p>삭제 : 저장소에서 자료를 꺼낸다. 꺼낸 자료는 삽입한 자료의 역순으로 꺼낸다. 보통 pop이라고 부른다.</p></li>
+<li><p><strong>삽입</strong> : 저장소에 자료를 저장한다. 보통 <strong>push</strong>라고 부른다.</p></li>
+<li><p><strong>삭제</strong> : 저장소에서 자료를 꺼낸다. 꺼낸 자료는 삽입한 자료의 역순으로 꺼낸다. 보통 <strong>pop</strong>이라고 부른다.</p></li>
 <li><p>스택이 공백인지 아닌지를 확인하는 연산. isEmpty</p></li>
 <li><p>스택의 top에 있는 item(원소)을 반환하는 연산. peek</p></li>
 </ul>
@@ -599,22 +618,38 @@
 <p><img alt="image-20210817220905905" src="../_images/image-20210817220905905.png" /></p>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">top</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+    
+    <span class="c1"># 더이상 삽입할 수 없는 상황</span>
+
+<span class="k">def</span> <span class="nf">pop</span><span class="p">():</span>
+    <span class="n">top</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]</span>  <span class="c1"># 다른 값이 push 됐을 때 덮어쓰기 때문에 굳이 삭제하지 않아도 됨</span>
+
+	<span class="c1"># 더 이상 삭제할 수 없는 상황</span>
+</pre></div>
+</div>
 <div class="section" id="push">
 <h5>스택의 push 알고리즘<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h5>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">append</span></code> 메소드를 통해 리스트의 마지막에 데이터를 삽입</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">append</span></code> 메소드를 통해 리스트의 마지막에 데이터를 삽입</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="pop">
 <h5>스택의 pop 알고리즘<a class="headerlink" href="#pop" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pop</span><span class="p">():</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="c1"># underflow</span>
+        <span class="c1"># underflow (모자라는데 꺼내라고 하는 것)</span>
         <span class="k">return</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
@@ -628,20 +663,51 @@
 <li><p>스택을 구현해 봅시다.</p></li>
 <li><p>구현한 스택을 이용하여 3개의 데이터를 스택에 저장하고 다시 3번 꺼내서 출력해봅시다.</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="n">stack</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
+
+<span class="k">def</span> <span class="nf">push</span><span class="p">():</span>
+    <span class="n">top</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">s</span><span class="p">[</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    
+<span class="k">def</span> <span class="nf">pop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="n">top</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">top</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">top</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">pop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="n">top</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">top</span><span class="p">])</span>
+        <span class="n">top</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id7">
 <h4>스택 구현 고려 사항<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
+<ul>
 <li><p>1차원 배열을 사용하여 구현할 경우 구현이 용이하다는 장점이 있지만 스택의 크기를 변경하기가 어렵다는 단점이 있다.</p></li>
-<li><p>이를 해결하기 위한 방법으로 저장소를 동적으로 할당하여 스택을 구현하는 방법이 있다. 동적 연결리스트를 이용하여 구현하는 방법을 의미한다. 구현이 복잡하다는 단점이 있지만 메모리를 효율적으로 사용한다는 장점을 가진다. 스택의 동적 구현은 생략한다.</p></li>
+<li><p>이를 해결하기 위한 방법으로 저장소를 동적으로 할당하여 스택을 구현하는 방법이 있다. 동적 연결리스트를 이용하여 구현하는 방법을 의미한다. 구현이 복잡하다는 단점이 있지만 메모리를 효율적으로 사용한다는 장점을 가진다. 스택의 동적 구현은 생략한다.</p>
+<p><img alt="Java로 연결 리스트(Linked List) 구현하기" src="https://t1.daumcdn.net/cfile/tistory/99CEE2425CB7F7CB10" /></p>
+</li>
 </ul>
+<br>
 </div>
 </div>
 <div class="section" id="id8">
 <h3>스택의 응용 1 : 괄호 검사<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>괄호의 종류 : 대괄호 (<code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>), 중괄호 (<code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code>), 소괄호 (<code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">)</span></code>)</p></li>
-<li><p>조건</p>
+<li><p><strong>괄호의 종류</strong> : 대괄호 (<code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>), 중괄호 (<code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code>), 소괄호 (<code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">)</span></code>)</p></li>
+<li><p><strong>조건</strong></p>
 <ol class="simple">
 <li><p>왼쪽 괄호의 개수와 오른쪽 괄호의 개수가 같아야 한다.</p></li>
 <li><p>같은 괄호에서 왼쪽 괄호는 오른쪽 괄호보다 먼저 나와야 한다.</p></li>
@@ -672,6 +738,7 @@
 </ul>
 </li>
 </ul>
+<br>
 </div>
 </div>
 <div class="section" id="function-call">
@@ -691,6 +758,7 @@
 <div class="section" id="id13">
 <h5>함수 호출과 복귀에 따른 전체 프로그램의 수행 순서<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h5>
 <p><img alt="image-20210817225023385" src="../_images/image-20210817225023385.png" /></p>
+<br>
 </div>
 </div>
 </div>
@@ -700,33 +768,51 @@
 <div class="section" id="id15">
 <h3>재귀 호출<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>자기 자신을 호출하여 순환 수행되는 것</p></li>
+<li><p><strong>자기 자신을 호출하여 순환 수행되는 것</strong></p></li>
 <li><p>함수에서 실행해야 하는 작업의 특성에 따라 일반적인 호출방식보다 재귀호출방식을 사용하여 함수를 만들면 프로그램의 크기를 줄이고 간단하게 작성</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>  <span class="c1"># 배열을 벗어나면 (모든 원소에 대한 작업이 끝나면)</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>  <span class="c1"># 다음 원소로 이동</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>  <span class="c1"># 배열을 출력하는 함수</span>
+</pre></div>
+</div>
+<br>
+</div>
 <div class="section" id="factorial">
-<h4>Factorial<a class="headerlink" href="#factorial" title="Permalink to this headline">¶</a></h4>
-<ul>
-<li><p>n에 대한 factorial : 1부터 n까지의 모든 자연수를 곱하여 구하는 연산</p>
+<h3>Factorial<a class="headerlink" href="#factorial" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li><p>n에 대한 factorial : 1부터 n까지의 모든 자연수를 곱하여 구하는 연산</p>
+<ul>
 <li><p><span class="math notranslate nohighlight">\(n! = n \times(n-1)!\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((n-1)! = (n-1) \times(n-2)!\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\dots\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(2! = 2 \times 1!\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1! = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1! = 1\)</span>​</p></li>
 </ul>
 </li>
+</ul>
+<br>
+<ul>
 <li><p>마지막에 구한 하위 값을 이용하여 상위 값을 구하는 작업을 반복</p></li>
 <li><p>factorial 함수에서 n=4인 경우의 실행</p>
 <p><img alt="image-20210817225802989" src="../_images/image-20210817225802989.png" /></p>
 </li>
 </ul>
+<br>
 </div>
 <div class="section" id="id16">
-<h4>피보나치 수열<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<h3>피보나치 수열<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>0과 1로 시작하고 이전의 두 수 합을 다음 항으로 하는 수열을 피보나치라 한다.</p>
 <ul>
-<li><p><span class="math notranslate nohighlight">\(0, 1, 2, 3, 5, 8, 13, \dots\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0, 1, 1, 2, 3, 5, 8, 13, \dots\)</span>​</p></li>
 </ul>
 </li>
 <li><p>피보나치 수열의 i번째 값을 계산하는 함수 F를 정의하면 다음과 같다.</p>
@@ -735,8 +821,11 @@
 <li><p><span class="math notranslate nohighlight">\(F_i = F_{i-1} + F_{i-2}\)</span> for <span class="math notranslate nohighlight">\(i \geq 2\)</span>​</p></li>
 </ul>
 </li>
+</ul>
+<br>
+<ul class="simple">
 <li><p>위의 정의로부터 피보나치 수열의  i번째 항을 반환하는 함수를 재귀함수로 구현할 수 있다.</p></li>
-<li><p>피보나치 수를 구하는 재귀함수</p></li>
+<li><p><strong>피보나치 수를 구하는 재귀함수</strong></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
@@ -745,7 +834,7 @@
         <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
+<br>
 </div>
 </div>
 <div class="section" id="id17">
@@ -757,6 +846,7 @@
 <p><img alt="image-20210817230413674" src="../_images/image-20210817230413674.png" /></p>
 </li>
 </ul>
+<br>
 <div class="section" id="memoization">
 <h3>메모이제이션 (Memoization)<a class="headerlink" href="#memoization" title="Permalink to this headline">¶</a></h3>
 <ul>
@@ -778,6 +868,7 @@
 </div>
 </li>
 </ul>
+<br>
 </div>
 </div>
 <div class="section" id="dp">
@@ -853,6 +944,7 @@
 <li><p>memoization을 재귀적 구조에 사용하는 것보다 반복적 구조로 DP를 구현한 것이 성능면에서 보다 효율적이다.</p></li>
 <li><p>재귀적 구조는 내부에 시스템 호출 스택을 사용하는 오버헤드가 발생하기 때문이다.</p></li>
 </ul>
+<br>
 </div>
 </div>
 </div>
@@ -869,6 +961,7 @@
 <li><p>시작 정점의 한 방향으로 갈 수 있는 경로가 있는 곳까지 깊이 탐색해 가다가 더 이상 갈 곳이 없게 되면, 가장 마지막에 만났던 갈림길 간선이 있는 정점으로 되돌아와서 다른 방햐으이 정점으로 탐색을 계속 반복하여 결국 모든 정점을 방문하는 순회 방법</p></li>
 <li><p>가장 마지막에 만났던 갈림길의 정점으로 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용</p></li>
 </ul>
+<br>
 <div class="section" id="id20">
 <h3>DFS 알고리즘<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
@@ -900,6 +993,7 @@
 <span class="n">end</span> <span class="n">DFS</span><span class="p">()</span>
 </pre></div>
 </div>
+<br>
 </div>
 <div class="section" id="id21">
 <h3>DFS 예<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
@@ -1003,6 +1097,7 @@
 <p><img alt="image-20210817233934063" src="../_images/image-20210817233934063.png" /></p>
 </li>
 </ol>
+<br>
 </div>
 <div class="section" id="id22">
 <h3>연습문제 3 : DFS<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
@@ -1016,6 +1111,78 @@
 <p><img alt="image-20210817234050256" src="../_images/image-20210817234050256.png" /></p>
 </li>
 </ul>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>3.6 계산기<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>문자열로 된 계산식이 주어질 때, 스택을 이용하여 이 계산식의 값을 계산할 수 있다.</p></li>
+<li><p>문자열 수식 계산의 일반적 방법</p>
+<ul>
+<li><p>step1. 중위 표기법의 수식을 후위 표기법으로 변경한다. (스택 이용)</p></li>
+<li><p>step2. 후위 표기법의 수식을 스택을 이용하여 계산한다.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>중위 표기법 (infix notation)</p>
+<ul>
+<li><p>연산자를 피연산자의 가운데 표기하는 방법 (예: <code class="docutils literal notranslate"><span class="pre">A+B</span></code>)</p></li>
+</ul>
+</li>
+<li><p>후위 표기법 (postfix notation)</p>
+<ul>
+<li><p>연산자를 피연산자 뒤에 표기하는 방법 (예: <code class="docutils literal notranslate"><span class="pre">AB+</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="step1-1">
+<h3>step1. 중위표기식의 후위표기식 변환 방법 1<a class="headerlink" href="#step1-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>수식의 각 연산자에 대해서 우선순위에 따라 괄호를 사용하여 다시 표현한다.</p></li>
+<li><p>각 연산자를 그에 대응하는 오른쪽 괄호의 뒤로 이동시킨다.</p></li>
+<li><p>괄호를 제거한다.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 예 : A*B - C/D</span>
+
+<span class="c1"># 1단계</span>
+<span class="p">((</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">C</span><span class="o">/</span><span class="n">D</span><span class="p">))</span>
+
+<span class="c1"># 2단계</span>
+<span class="p">((</span><span class="n">A</span> <span class="n">B</span><span class="p">)</span><span class="o">*</span> <span class="p">(</span><span class="n">C</span> <span class="n">D</span><span class="p">)</span><span class="o">/</span><span class="p">)</span><span class="o">-</span>
+
+<span class="c1"># 3단계</span>
+<span class="n">AB</span><span class="o">*</span><span class="n">CD</span><span class="o">/-</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step1">
+<h3>step1. 중위 표기법에서 후위 표기법으로의 변환 알고리즘 (스택 이용)<a class="headerlink" href="#step1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>입력 받은 중위 표기식에서 토큰을 읽는다.</p></li>
+<li><p>토큰이 피연산자이면 토큰을 출력한다.</p></li>
+<li><p>토큰이 연산자 (괄호 포함)일 때, 이 토큰이 스택의 top에 저장되어 있는 연산자보다 우선순위가 높으면 스택에  push하고, 그렇지 않다면 스택 top의 연산자의 우선순위가 토큰의 우선순위보다 작을 때까지 스택에서 pop한 후 토큰의 연산자를 push한다. 만약 top에 연산자가 없으면 push 한다.</p></li>
+<li><p>토큰이 오른쪽 괄호 (<code class="docutils literal notranslate"><span class="pre">)</span></code>) 이면 스택 top에 왼쪽 괄호 (<code class="docutils literal notranslate"><span class="pre">(</span></code>)가 올 때 까지 스택에 pop 연산을 수행하고 pop한 연산자를 출력한다. 왼쪽 괄호를 만나면 pop만 하고 출력하지는 않는다.</p></li>
+<li><p>중위 표기식에 더 읽을 것이 없다면 중지하고, 더 읽을 것이 있다면 1부터 다시 반복한다.</p></li>
+<li><p>스택에 남아 있는 연산자를 모두 pop하여 출력한다.</p>
+<ul class="simple">
+<li><p>스택 밖의 왼쪽 괄호는 우선순위가 가장 높으며, 스택 안의 왼쪽 괄호는 우선순위가 가장 낮다.</p></li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p>우선 중위 표기법에서 후위 표기법으로의 변환한다.</p></li>
+<li><p>중위 표기법으로 표현된 수식 예</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">(6</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">(2</span> <span class="pre">-</span> <span class="pre">8)</span> <span class="pre">/</span> <span class="pre">2)</span></code></p></li>
+</ul>
+</li>
+</ul>
+<iframe src="../_iframe/carousel.html" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;"></iframe>
+<p>…</p>
 </div>
 </div>
 </div>
