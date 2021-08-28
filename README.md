@@ -1,6 +1,6 @@
 # Learning Python
 
-[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://hing9u.github.io/python/docs/index.html)
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://devpla.github.io/python/docs/index.html)
 
 
 
